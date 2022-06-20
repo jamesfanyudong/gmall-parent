@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfcd86c9-9ab9-4c8b-8270-063f638d145a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="fyd" />
+        <option value="樊育东" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\workspace\gmall\gmall-parent\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\JavaDevelopment\repository" />
+        <option name="mavenHome" value="D:/JavaDevelopment/maven3.5" />
+        <option name="userSettingsFile" value="D:\JavaDevelopment\maven3.5\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Apnzhb7tfJCr3MygSvBdQ9QX9A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="D:/JavaDevelopment/jdk1.8" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductMainApplication">
+    <configuration name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="server-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.gateway.GatewayMainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.product.ProductMainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ProductMainApplication" />
+        <item itemvalue="Spring Boot.GatewayMainApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfcd86c9-9ab9-4c8b-8270-063f638d145a" name="Default Changelist" comment="" />
+      <created>1655713092914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655713092914</updated>
+      <workItem from="1655713094369" duration="2556000" />
+      <workItem from="1655715661097" duration="7953000" />
+    </task>
+    <task id="LOCAL-00001" summary="c初始化">
+      <created>1655713667806</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655713667806</updated>
+    </task>
+    <task id="LOCAL-00002" summary="搭建common模块">
+      <created>1655714137614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655714137614</updated>
+    </task>
+    <task id="LOCAL-00003" summary="模块初始化">
+      <created>1655715077420</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655715077420</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="c初始化" />
+    <MESSAGE value="搭建common模块" />
+    <MESSAGE value="模块初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="模块初始化" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="277" y="81" key="#Notifications" timestamp="1655715012364">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="277" y="81" key="#Notifications/0.0.1440.860@0.0.1440.860" timestamp="1655715012364" />
+    <state x="300" y="182" key="#Project_Structure" timestamp="1655724618266">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="300" y="182" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1655724618266" />
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1655725018881">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1655725018881" />
+    <state x="685" y="172" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1655714578796">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="685" y="172" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1440.860@0.0.1440.860" timestamp="1655714578796" />
+    <state x="321" y="51" key="CommitChangelistDialog2" timestamp="1655715076690">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="321" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1655715076690" />
+    <state width="901" height="273" key="GridCell.Tab.0.bottom" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="273" key="GridCell.Tab.0.center" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="273" key="GridCell.Tab.0.left" timestamp="1655725038953">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655725038953" />
+    <state width="901" height="273" key="GridCell.Tab.0.right" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="273" key="GridCell.Tab.1.bottom" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="273" key="GridCell.Tab.1.center" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="273" key="GridCell.Tab.1.left" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="273" key="GridCell.Tab.1.right" timestamp="1655725038954">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="273" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state x="223" y="149" key="SettingsEditor" timestamp="1655715653192">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="223" y="149" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1655715653192" />
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1655715125390">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1655715125390" />
+    <state x="399" y="231" key="git4idea.merge.GitPullDialog" timestamp="1655715186782">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="399" y="231" key="git4idea.merge.GitPullDialog/0.0.1440.860@0.0.1440.860" timestamp="1655715186782" />
+    <state x="189" y="267" key="new project wizard" timestamp="1655716565204">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="189" y="267" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1655716565204" />
+  </component>
+</project>

@@ -9,6 +9,9 @@
     <version>1.0</version>
     <modules>
         <module>gmall-common</module>
+        <module>model</module>
+        <module>service</module>
+        <module>server-gateway</module>
     </modules>
     <!--父工程-->
     <packaging>pom</packaging>
