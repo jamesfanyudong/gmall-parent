@@ -13,5 +13,14 @@
 
     <description>商品服务</description>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>7.0.2</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

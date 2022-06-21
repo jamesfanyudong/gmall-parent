@@ -57,13 +57,45 @@
               </list>
             </option>
             <option name="needsComment" value="true" />
-            <option name="relativePackage" value="domain" />
+            <option name="relativePackage" value="domin" />
             <option name="superClass" value="" />
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="BaseCategory3" />
-                  <option name="tableName" value="base_category3" />
+                  <option name="className" value="SkuAttrValue" />
+                  <option name="tableName" value="sku_attr_value" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SkuImage" />
+                  <option name="tableName" value="sku_image" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SkuInfo" />
+                  <option name="tableName" value="sku_info" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SkuSaleAttrValue" />
+                  <option name="tableName" value="sku_sale_attr_value" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SpuImage" />
+                  <option name="tableName" value="spu_image" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SpuInfo" />
+                  <option name="tableName" value="spu_info" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SpuPoster" />
+                  <option name="tableName" value="spu_poster" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SpuSaleAttr" />
+                  <option name="tableName" value="spu_sale_attr" />
+                </TableUIInfo>
+                <TableUIInfo>
+                  <option name="className" value="SpuSaleAttrValue" />
+                  <option name="tableName" value="spu_sale_attr_value" />
                 </TableUIInfo>
               </list>
             </option>
