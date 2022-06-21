@@ -2,8 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfcd86c9-9ab9-4c8b-8270-063f638d145a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/838840e0-2166-41fa-a9d7-646ebadf9b94.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/838840e0-2166-41fa-a9d7-646ebadf9b94/storage_v2/_src_/schema/gmall_product.q8P6vQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/838840e0-2166-41fa-a9d7-646ebadf9b94/storage_v2/_src_/schema/gmall_product.q8P6vQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/838840e0-2166-41fa-a9d7-646ebadf9b94/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/ActivityInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/ActivityRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/ActivityRuleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/ActivitySku.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/CouponInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/CouponRange.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/CouponRuleVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/CouponUse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/OrderRecode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/SeckillGoods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/activity/UserRecode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/base/BaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/cart/CarInfoVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/cart/CartInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/cart/CartInfoVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/ActivityType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/CouponRangeType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/CouponStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/CouponType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/OrderStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/PaymentStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/PaymentType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/PaymentWay.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/ProcessStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/list/Goods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/list/SearchAttr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/list/SearchParam.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/list/SearchResponseAttrVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/list/SearchResponseTmVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/list/SearchResponseVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderDetail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderDetailActivity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderDetailCoupon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderDetailVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderStatusLog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderTradeVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/payment/PaymentInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseAttrInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseAttrValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseCategory1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseCategory2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseCategory3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseCategoryView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseSaleAttr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/BaseTrademark.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SkuAttrValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SkuImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SkuInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SkuSaleAttrValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SpuImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SpuInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SpuPoster.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SpuSaleAttr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/product/SpuSaleAttrValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/user/UserAddress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/user/UserInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/AttrInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseCategory2Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/BaseCategory3Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/BaseCategory2Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/BaseCategory3Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseCategory2ServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseCategory3ServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/BaseCategory2Mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/BaseCategory3Mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/controller/CategoryController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory1Mapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory2Mapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/BaseCategory3Mapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/BaseCategory1Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/BaseCategory2Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/BaseCategory3Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseCategory1ServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseCategory2ServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseCategory3ServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/mapper/BaseCategory2Mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/mapper/BaseCategory3Mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/common-util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/common-util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/gmall-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/gmall-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/service-util/service-util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/service-util/service-util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-gateway/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-gateway/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/target/classes/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/service-product.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/service-product.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/BaseCategory1Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/BaseCategory1Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseCategory1ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseCategory1ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/ProductMainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/ProductMainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +123,46 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="base_category2: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="base_category3: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -72,6 +213,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -84,6 +227,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -93,8 +237,18 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductMainApplication">
-    <configuration name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Compound.mall">
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductMainApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mall" type="CompoundRunConfigurationType">
+      <toRun name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ProductMainApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="server-gateway" />
       <extension name="coverage">
         <pattern>
@@ -103,11 +257,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.gateway.GatewayMainApplication" />
+      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="service-product" />
       <extension name="coverage">
         <pattern>
@@ -116,16 +272,17 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.product.ProductMainApplication" />
+      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.ProductMainApplication" />
-        <item itemvalue="Spring Boot.GatewayMainApplication" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Compound.mall" />
+      <item itemvalue="Spring Boot.GatewayMainApplication" />
+      <item itemvalue="Spring Boot.ProductMainApplication" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -141,6 +298,10 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:MySQL - @192.168.200.128" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -160,7 +321,8 @@
       <option name="presentableId" value="Default" />
       <updated>1655713092914</updated>
       <workItem from="1655713094369" duration="2556000" />
-      <workItem from="1655715661097" duration="7953000" />
+      <workItem from="1655715661097" duration="12822000" />
+      <workItem from="1655770823722" duration="4868000" />
     </task>
     <task id="LOCAL-00001" summary="c初始化">
       <created>1655713667806</created>
@@ -183,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655715077420</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="创建一级分类">
+      <created>1655725403120</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655725403120</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,69 +380,102 @@
     <MESSAGE value="c初始化" />
     <MESSAGE value="搭建common模块" />
     <MESSAGE value="模块初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="模块初始化" />
+    <MESSAGE value="创建一级分类" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建一级分类" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="696" y="142" width="744" height="698" key="#GatewayMainApplication" timestamp="1655729299322">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="696" y="142" width="744" height="698" key="#GatewayMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1655729299322" />
     <state x="277" y="81" key="#Notifications" timestamp="1655715012364">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="277" y="81" key="#Notifications/0.0.1440.860@0.0.1440.860" timestamp="1655715012364" />
+    <state x="0" y="0" width="744" height="860" key="#ProductMainApplication" timestamp="1655729306331">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="0" y="0" width="744" height="860" key="#ProductMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1655729306331" />
     <state x="300" y="182" key="#Project_Structure" timestamp="1655724618266">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="300" y="182" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1655724618266" />
-    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1655725018881">
+    <state x="114" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1655772189524">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1655725018881" />
+    <state x="114" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1655772189524" />
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1655771775675">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1655771775675" />
     <state x="685" y="172" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1655714578796">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="685" y="172" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1440.860@0.0.1440.860" timestamp="1655714578796" />
-    <state x="321" y="51" key="CommitChangelistDialog2" timestamp="1655715076690">
+    <state x="321" y="51" key="CommitChangelistDialog2" timestamp="1655725401769">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="321" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1655715076690" />
-    <state width="901" height="273" key="GridCell.Tab.0.bottom" timestamp="1655725038954">
+    <state x="321" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1655725401769" />
+    <state width="901" height="167" key="GridCell.Tab.0.bottom" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
-    <state width="901" height="273" key="GridCell.Tab.0.center" timestamp="1655725038954">
+    <state width="901" height="167" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.0.center" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
-    <state width="901" height="273" key="GridCell.Tab.0.left" timestamp="1655725038953">
+    <state width="901" height="167" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.0.left" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655725038953" />
-    <state width="901" height="273" key="GridCell.Tab.0.right" timestamp="1655725038954">
+    <state width="901" height="167" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.0.right" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
-    <state width="901" height="273" key="GridCell.Tab.1.bottom" timestamp="1655725038954">
+    <state width="901" height="167" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.1.bottom" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
-    <state width="901" height="273" key="GridCell.Tab.1.center" timestamp="1655725038954">
+    <state width="901" height="167" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.1.center" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
-    <state width="901" height="273" key="GridCell.Tab.1.left" timestamp="1655725038954">
+    <state width="901" height="167" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.1.left" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
-    <state width="901" height="273" key="GridCell.Tab.1.right" timestamp="1655725038954">
+    <state width="901" height="167" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="167" key="GridCell.Tab.1.right" timestamp="1655782709974">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="901" height="273" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655725038954" />
+    <state width="901" height="167" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655782709974" />
+    <state width="901" height="224" key="GridCell.Tab.2.bottom" timestamp="1655771191199">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="224" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655771191199" />
+    <state width="901" height="224" key="GridCell.Tab.2.center" timestamp="1655771191199">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="224" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1655771191199" />
+    <state width="901" height="224" key="GridCell.Tab.2.left" timestamp="1655771191199">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="224" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1655771191199" />
+    <state width="901" height="224" key="GridCell.Tab.2.right" timestamp="1655771191199">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="901" height="224" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1655771191199" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1655731813751">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1440.860@0.0.1440.860" timestamp="1655731813751" />
     <state x="223" y="149" key="SettingsEditor" timestamp="1655715653192">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="223" y="149" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1655715653192" />
-    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1655715125390">
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1655725417108">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1655715125390" />
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1655725417108" />
     <state x="399" y="231" key="git4idea.merge.GitPullDialog" timestamp="1655715186782">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -282,5 +484,9 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="189" y="267" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1655716565204" />
+    <state x="579" y="333" width="186" height="491" key="search.text.field" timestamp="1655782703751">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="579" y="333" width="186" height="491" key="search.text.field/0.0.1440.860@0.0.1440.860" timestamp="1655782703751" />
   </component>
 </project>
