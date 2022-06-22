@@ -2,11 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfcd86c9-9ab9-4c8b-8270-063f638d145a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/ProductMainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/ProductMainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseAttrInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseAttrInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/TrademarkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/controller/TrademarkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SkuInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SkuInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/BaseTrademarkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/BaseTrademarkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SkuImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SkuImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SkuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SkuInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuSaleAttrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/SpuSaleAttrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseTrademarkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/BaseTrademarkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SkuImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SkuImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SkuInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SkuInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SpuSaleAttrMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/mapper/SpuSaleAttrMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/ProductMainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/ProductMainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/controller/TrademarkController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/controller/TrademarkController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/mapper/SpuSaleAttrMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/BaseTrademarkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/BaseTrademarkService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuSaleAttrService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/SpuSaleAttrService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseAttrInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseAttrInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseTrademarkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/BaseTrademarkServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SkuImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SkuImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SkuInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/service/impl/SpuSaleAttrServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/mapper/SpuSaleAttrMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/mapper/SpuSaleAttrMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +77,38 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sku_attr_value: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sku_image: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sku_info: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @192.168.200.128" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall_product: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sku_sale_attr_value: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -116,12 +176,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="I:/mall0106/本地库/gmall-parent" />
+    <property name="last_opened_file_path" value="I:/mall0106/本地库/gmall-parent/gmall-parent" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -130,7 +190,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MiniIoTest.fileUpload">
+  <component name="RunManager" selected="Compound.mall">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="ProductMainApplication" type="SpringBootApplicationConfigurationType" />
@@ -203,12 +263,17 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.26103216" />
+          <option name="contentProportion" value="0.2143402" />
           <treeState>
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -230,7 +295,10 @@
       <workItem from="1655713094369" duration="2556000" />
       <workItem from="1655715661097" duration="12822000" />
       <workItem from="1655770823722" duration="26534000" />
-      <workItem from="1655858880999" duration="1382000" />
+      <workItem from="1655858880999" duration="1655000" />
+      <workItem from="1655876864070" duration="8376000" />
+      <workItem from="1655885459866" duration="175000" />
+      <workItem from="1655886305747" duration="3893000" />
     </task>
     <task id="LOCAL-00001" summary="c初始化">
       <created>1655713667806</created>
@@ -274,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655815744849</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完成品牌信息增删改查，上传文件以及全局异常111111">
+      <created>1655869567068</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655869567068</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +380,8 @@
     <MESSAGE value="创建一级分类" />
     <MESSAGE value="完成属性信息查询" />
     <MESSAGE value="完成品牌信息增删改查，上传文件以及全局异常" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成品牌信息增删改查，上传文件以及全局异常" />
+    <MESSAGE value="完成品牌信息增删改查，上传文件以及全局异常111111" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成品牌信息增删改查，上传文件以及全局异常111111" />
   </component>
   <component name="WindowStateProjectService">
     <state x="696" y="142" width="744" height="698" key="#GatewayMainApplication" timestamp="1655729299322">
@@ -320,18 +396,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="0" y="0" width="744" height="860" key="#ProductMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1655729306331" />
-    <state x="300" y="182" key="#Project_Structure" timestamp="1655862485925">
+    <state x="300" y="182" key="#Project_Structure" timestamp="1655885201830">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="300" y="182" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1655862485925" />
+    <state x="300" y="182" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1655885201830" />
     <state x="114" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1655772189524">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="114" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1655772189524" />
-    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1655813529087">
+    <state x="411" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655885229422">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1655813529087" />
+    <state x="411" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1655885229422" />
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1655892897023">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1655892897023" />
     <state x="685" y="172" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1655714578796">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -340,74 +420,82 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="386" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1655795414298" />
-    <state x="321" y="51" key="CommitChangelistDialog2" timestamp="1655815743698">
+    <state x="321" y="51" key="CommitChangelistDialog2" timestamp="1655869566299">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="321" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1655815743698" />
-    <state x="579" y="238" key="FileChooserDialogImpl" timestamp="1655801708842">
+    <state x="321" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1655869566299" />
+    <state x="579" y="238" key="FileChooserDialogImpl" timestamp="1655877817866">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="579" y="238" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1655801708842" />
-    <state width="1366" height="283" key="GridCell.Tab.0.bottom" timestamp="1655818202379">
+    <state x="579" y="238" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1655877817866" />
+    <state x="567" y="421" width="373" height="205" key="Github.CreateGistDialog" timestamp="1655887989252">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1366" height="283" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655818202379" />
-    <state width="1366" height="283" key="GridCell.Tab.0.center" timestamp="1655818202379">
+    <state x="567" y="421" width="373" height="205" key="Github.CreateGistDialog/0.0.1440.860@0.0.1440.860" timestamp="1655887989252" />
+    <state width="1029" height="154" key="GridCell.Tab.0.bottom" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1366" height="283" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655818202379" />
-    <state width="1366" height="283" key="GridCell.Tab.0.left" timestamp="1655818202379">
+    <state width="1029" height="154" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.0.center" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1366" height="283" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655818202379" />
-    <state width="1366" height="283" key="GridCell.Tab.0.right" timestamp="1655818202379">
+    <state width="1029" height="154" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.0.left" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1366" height="283" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655818202379" />
-    <state width="987" height="208" key="GridCell.Tab.1.bottom" timestamp="1655818202378">
+    <state width="1029" height="154" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.0.right" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655818202378" />
-    <state width="987" height="208" key="GridCell.Tab.1.center" timestamp="1655818202378">
+    <state width="1029" height="154" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.1.bottom" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655818202378" />
-    <state width="987" height="208" key="GridCell.Tab.1.left" timestamp="1655818202378">
+    <state width="1029" height="154" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.1.center" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655818202378" />
-    <state width="987" height="208" key="GridCell.Tab.1.right" timestamp="1655818202378">
+    <state width="1029" height="154" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.1.left" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655818202378" />
-    <state width="987" height="208" key="GridCell.Tab.2.bottom" timestamp="1655818071055">
+    <state width="1029" height="154" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1029" height="154" key="GridCell.Tab.1.right" timestamp="1655893818987">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655818071055" />
-    <state width="987" height="208" key="GridCell.Tab.2.center" timestamp="1655818071055">
+    <state width="1029" height="154" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655893818987" />
+    <state width="1144" height="266" key="GridCell.Tab.2.bottom" timestamp="1655882844463">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1655818071055" />
-    <state width="987" height="208" key="GridCell.Tab.2.left" timestamp="1655818071055">
+    <state width="1144" height="266" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655882844463" />
+    <state width="1144" height="266" key="GridCell.Tab.2.center" timestamp="1655882844463">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1655818071055" />
-    <state width="987" height="208" key="GridCell.Tab.2.right" timestamp="1655818071055">
+    <state width="1144" height="266" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1655882844463" />
+    <state width="1144" height="266" key="GridCell.Tab.2.left" timestamp="1655882844463">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="987" height="208" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1655818071055" />
+    <state width="1144" height="266" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1655882844463" />
+    <state width="1144" height="266" key="GridCell.Tab.2.right" timestamp="1655882844463">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1144" height="266" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1655882844463" />
     <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1655731813751">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1440.860@0.0.1440.860" timestamp="1655731813751" />
-    <state x="149" y="14" key="SettingsEditor" timestamp="1655858921325">
+    <state x="149" y="14" key="SettingsEditor" timestamp="1655892211040">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="149" y="14" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1655858921325" />
-    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1655815752701">
+    <state x="149" y="14" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1655892211040" />
+    <state x="618" y="358" key="VCS.EditChangelistDialog" timestamp="1655869622997">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1655815752701" />
+    <state x="618" y="358" key="VCS.EditChangelistDialog/0.0.1440.860@0.0.1440.860" timestamp="1655869622997" />
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1655869585108">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1655869585108" />
     <state width="728" height="438" key="XDebugger.FullValuePopup" timestamp="1655816124200">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -432,6 +520,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="189" y="267" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1655716565204" />
+    <state x="683" y="339" width="672" height="678" key="search.everywhere.popup" timestamp="1655892881146">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="683" y="339" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1655892881146" />
     <state x="579" y="333" width="186" height="491" key="search.text.field" timestamp="1655811036965">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

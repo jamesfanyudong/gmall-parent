@@ -11,8 +11,28 @@
             <result property="saleAttrName" column="sale_attr_name" jdbcType="VARCHAR"/>
     </resultMap>
 
+    <resultMap id="getSpuSaleAttrListMap" type="com.atguigu.gmall.model.product.SpuSaleAttr" autoMapping="true">
+        <id property="id" column="id" />
+
+        <collection property="spuSaleAttrValueList" ofType="com.atguigu.gmall.model.product.SpuSaleAttrValue" autoMapping="true">
+            <id property="id" column="vid"></id>
+        </collection>
+
+    </resultMap>
+
+
+
     <sql id="Base_Column_List">
         id,spu_id,base_sale_attr_id,
         sale_attr_name
     </sql>
+
+    <select id="getSpuSaleAttrList" resultMap="getSpuSaleAttrListMap">
+        select ssa.* ,ssav.id vid,ssav.sale_attr_value_name from spu_sale_attr ssa
+        left join spu_sale_attr_value ssav
+        on ssa.spu_id = ssav.spu_id and ssa.base_sale_attr_id = ssav.base_sale_attr_id
+        where ssa.spu_id = #{spuId}
+
+
+    </select>
 </mapper>
