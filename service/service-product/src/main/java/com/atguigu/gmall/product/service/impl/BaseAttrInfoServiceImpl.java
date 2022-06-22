@@ -2,15 +2,14 @@ package com.atguigu.gmall.product.service.impl;
 
 import com.atguigu.gmall.model.product.BaseAttrInfo;
 import com.atguigu.gmall.model.product.BaseAttrValue;
-import com.atguigu.gmall.product.mapper.BaseAttrValueMapper;
+import com.atguigu.gmall.product.mapper.BaseAttrInfoMapper;
+import com.atguigu.gmall.product.service.BaseAttrInfoService;
 import com.atguigu.gmall.product.service.BaseAttrValueService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-
-import com.atguigu.gmall.product.service.BaseAttrInfoService;
-import com.atguigu.gmall.product.mapper.BaseAttrInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,19 +53,23 @@ public class BaseAttrInfoServiceImpl extends ServiceImpl<BaseAttrInfoMapper, Bas
         ArrayList<Long> ids = new ArrayList<>();
         List<BaseAttrValue> valueList = baseAttrInfo.getAttrValueList();
         for (BaseAttrValue attrValue : valueList) {
-            if (attrValue.getAttrId() != null){
-                // 修改
-                baseAttrValueService.updateById(attrValue);
-                ids.add(attrValue.getId());
 
-            }
-            if (attrValue.getAttrId() == null){
+            // 新增·11
+            if (attrValue.getId() == null){
                 //新增
                 attrValue.setAttrId(baseAttrInfo.getId());
                 baseAttrValueService.save(attrValue);
 
             }
 
+
+
+            if (attrValue.getId() != null){
+                // 修改
+                baseAttrValueService.updateById(attrValue);
+                ids.add(attrValue.getId());
+
+            }
         }
 
         //2.3、删除(前端没带的值id，就是删除)
@@ -75,7 +78,7 @@ public class BaseAttrInfoServiceImpl extends ServiceImpl<BaseAttrInfoMapper, Bas
         //3、计算差集：  59
         // delete * from base_attr_value
         // where attr_id=12 and id not in(60,61)
-        if (ids.size()>0){ // 删除部分
+        if (ids.size() > 0){ // 删除部分
             QueryWrapper<BaseAttrValue> wrapper = new QueryWrapper<>();
             wrapper.eq("attr_id",baseAttrInfo.getId());
             wrapper.notIn("id",ids);
@@ -94,6 +97,7 @@ public class BaseAttrInfoServiceImpl extends ServiceImpl<BaseAttrInfoMapper, Bas
      * @param baseAttrInfo
      */
 
+    @Transactional
     @Override
     public void saveAttrInfo(BaseAttrInfo baseAttrInfo) {
         // 保存属性名
