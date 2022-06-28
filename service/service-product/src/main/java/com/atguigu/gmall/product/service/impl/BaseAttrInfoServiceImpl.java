@@ -1,10 +1,10 @@
 package com.atguigu.gmall.product.service.impl;
 
-import com.atguigu.gmall.model.product.BaseAttrInfo;
-import com.atguigu.gmall.model.product.BaseAttrValue;
 import com.atguigu.gmall.product.mapper.BaseAttrInfoMapper;
 import com.atguigu.gmall.product.service.BaseAttrInfoService;
 import com.atguigu.gmall.product.service.BaseAttrValueService;
+import com.atguigu.gmall.model.product.BaseAttrInfo;
+import com.atguigu.gmall.model.product.BaseAttrValue;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Service
 public class BaseAttrInfoServiceImpl extends ServiceImpl<BaseAttrInfoMapper, BaseAttrInfo>
-    implements BaseAttrInfoService{
+    implements BaseAttrInfoService {
     @Autowired
     BaseAttrInfoMapper baseAttrInfoMapper;
     @Autowired

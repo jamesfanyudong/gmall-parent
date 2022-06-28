@@ -16,3 +16,11 @@ spring:
           uri: lb://service-product
           predicates:
             - Path=/admin/product/**
+
+        - id: front_route
+          uri: lb://web-front
+          predicates:
+            - Host=**.gmall.com
+
+
+

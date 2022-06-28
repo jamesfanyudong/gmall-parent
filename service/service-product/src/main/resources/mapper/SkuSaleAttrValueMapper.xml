@@ -15,4 +15,28 @@
         id,sku_id,spu_id,
         sale_attr_value_id
     </sql>
+
+    <resultMap id="ValuesSkuVoMap" type="com.atguigu.gmall.model.vo.ValuesSkuVo">
+        <id column="sku_id" property="sku_id"></id>
+        <result property="sku_values" column="sku_values"></result>
+    </resultMap>
+    <select id="getSpudeAllSkuSaleAttrAndValue"  resultMap="ValuesSkuVoMap">
+        select abc.sku_id,
+               GROUP_CONCAT(
+                   DISTINCT abc.sale_attr_value_id
+                   ORDER BY abc.sale_attr_value_id ASC SEPARATOR '|'
+               ) sku_values
+        from (select ssav.*,
+                     spuav.sale_attr_name,
+                     spuav.sale_attr_value_name
+              from sku_sale_attr_value ssav
+                       left join spu_sale_attr_value spuav
+                                 on spuav.spu_id = ssav.spu_id
+                                     and ssav.sale_attr_value_id = spuav.id
+              WHERE ssav.spu_id = #{spuId}
+              ORDER BY ssav.sku_id,
+                       spuav.base_sale_attr_id,
+                       ssav.sale_attr_value_id) abc
+        GROUP BY abc.sku_id
+    </select>
 </mapper>

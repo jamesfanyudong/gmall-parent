@@ -16,6 +16,7 @@ import lombok.Data;
 @Data
 @ApiModel(description = "平台属性值")
 @TableName("base_attr_value")
+
 public class BaseAttrValue extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;

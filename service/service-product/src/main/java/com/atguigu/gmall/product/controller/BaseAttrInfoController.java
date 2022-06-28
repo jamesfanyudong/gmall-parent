@@ -1,10 +1,10 @@
 package com.atguigu.gmall.product.controller;
 
 import com.atguigu.gmall.common.result.Result;
-import com.atguigu.gmall.model.product.BaseAttrInfo;
-import com.atguigu.gmall.model.product.BaseAttrValue;
 import com.atguigu.gmall.product.service.BaseAttrInfoService;
 import com.atguigu.gmall.product.service.BaseAttrValueService;
+import com.atguigu.gmall.model.product.BaseAttrInfo;
+import com.atguigu.gmall.model.product.BaseAttrValue;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,6 +69,7 @@ public class BaseAttrInfoController {
      */
 
     ///getAttrValueList/1
+    @SuppressWarnings("AlibabaCommentsMustBeJavadocFormat")
     @GetMapping("/getAttrValueList/{id}")
     public Result getAttrValueList(@PathVariable Long id){
         QueryWrapper<BaseAttrValue> wrapper = new QueryWrapper<>();

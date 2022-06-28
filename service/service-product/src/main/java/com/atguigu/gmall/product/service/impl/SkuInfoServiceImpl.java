@@ -1,23 +1,25 @@
 package com.atguigu.gmall.product.service.impl;
 
+import com.atguigu.gmall.product.mapper.SkuInfoMapper;
+import com.atguigu.gmall.product.service.SkuImageService;
+import com.atguigu.gmall.product.service.SkuSaleAttrValueService;
 import com.atguigu.gmall.model.product.SkuAttrValue;
 import com.atguigu.gmall.model.product.SkuImage;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SkuSaleAttrValue;
-import com.atguigu.gmall.product.mapper.SkuInfoMapper;
 import com.atguigu.gmall.product.service.SkuAttrValueService;
-import com.atguigu.gmall.product.service.SkuImageService;
 import com.atguigu.gmall.product.service.SkuInfoService;
-import com.atguigu.gmall.product.service.SkuSaleAttrValueService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
  *
+ * @author fanyudong
  */
 @Service
 public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
@@ -75,6 +77,26 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
     public void cancelSale(Long skuId) {
         // TODO 加入检索
         skuInfoMapper.updateStatus(skuId,0);
+    }
+
+    /**
+     * 获取skuId,放入布隆过滤器
+     * @return
+     */
+    @Override
+    public List<Long> getSkuIds() {
+
+        return skuInfoMapper.getSkuIds();
+    }
+
+    /**
+     * 获取商品价格
+     * @param skuId
+     * @return
+     */
+    @Override
+    public BigDecimal getSkuPrice(Long skuId) {
+        return skuInfoMapper.getSkuPrice(skuId);
     }
 }
 

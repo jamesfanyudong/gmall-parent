@@ -1,0 +1,25 @@
+{
+  "id": null,
+  "spuName": "1212",
+  "description": "23123123123",
+  "category3Id": 61,
+  "spuImageList": [
+    {
+      "imgName": "pingguo.png",
+      "imgUrl": "http://192.168.200.128:9000/gmall/4256cc95cc844852927cc65fe604edf8_pingguo.png"
+    }
+  ],
+  "spuSaleAttrList": [
+    {
+      "baseSaleAttrId": "1",
+      "saleAttrName": "选择颜色",
+      "spuSaleAttrValueList": [
+        {
+          "baseSaleAttrId": "1",
+          "saleAttrValueName": "红色"
+        }
+      ]
+    }
+  ],
+  "tmId": 4
+}

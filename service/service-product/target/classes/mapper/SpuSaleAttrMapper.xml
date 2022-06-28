@@ -21,6 +21,18 @@
     </resultMap>
 
 
+    <!--    销售属性名和值定义结果集封装-->
+    <resultMap id="SaleAttrNameAndValueResultMap" type="com.atguigu.gmall.model.product.SpuSaleAttr"
+    autoMapping="true">
+        <id property="id" column="id"></id>
+        <collection property="spuSaleAttrValueList" ofType="com.atguigu.gmall.model.product.SpuSaleAttrValue"
+        autoMapping="true">
+            <id property="id" column="vid"></id>
+        </collection>
+
+    </resultMap>
+
+
 
     <sql id="Base_Column_List">
         id,spu_id,base_sale_attr_id,
@@ -34,5 +46,16 @@
         where ssa.spu_id = #{spuId}
 
 
+    </select>
+
+    <select id="getSpuSaleAttrAndMarkSkuSaleValue" resultMap="SaleAttrNameAndValueResultMap">
+    SELECT ssa.*,ssav.id vid,ssav.`sale_attr_value_name` ,IF(skuav.id IS NULL,'0','1') is_checked
+    FROM spu_sale_attr_value ssav
+    LEFT JOIN spu_sale_attr ssa
+    ON ssav.`base_sale_attr_id`=ssa.`base_sale_attr_id` AND ssa.`spu_id` = ssav.`spu_id`
+    LEFT JOIN sku_sale_attr_value skuav
+    ON ssav.`id` = skuav.`sale_attr_value_id` AND skuav.`sku_id`=#{skuId}
+    WHERE ssav.`spu_id`=#{spuId}
+    ORDER BY ssav.`base_sale_attr_id`,ssav.`id`
     </select>
 </mapper>

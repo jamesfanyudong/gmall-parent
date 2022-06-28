@@ -1,16 +1,16 @@
 package com.atguigu.gmall.product.service.impl;
 
+import com.atguigu.gmall.product.mapper.SpuInfoMapper;
+import com.atguigu.gmall.product.service.SpuImageService;
+import com.atguigu.gmall.product.service.SpuInfoService;
+import com.atguigu.gmall.product.service.SpuSaleAttrService;
 import com.atguigu.gmall.model.product.SpuImage;
 import com.atguigu.gmall.model.product.SpuInfo;
 import com.atguigu.gmall.model.product.SpuSaleAttr;
 import com.atguigu.gmall.model.product.SpuSaleAttrValue;
-import com.atguigu.gmall.product.service.SpuImageService;
-import com.atguigu.gmall.product.service.SpuSaleAttrService;
 import com.atguigu.gmall.product.service.SpuSaleAttrValueService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
-import com.atguigu.gmall.product.service.SpuInfoService;
-import com.atguigu.gmall.product.mapper.SpuInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,11 +18,11 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- *
+ * author：fyd
  */
 @Service
 public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoMapper, SpuInfo>
-    implements SpuInfoService{
+    implements SpuInfoService {
     @Autowired
     SpuImageService spuImageService;
 
@@ -65,11 +65,12 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoMapper, SpuInfo>
             List<SpuSaleAttrValue> valueList = spuSaleAttr.getSpuSaleAttrValueList();
             for (SpuSaleAttrValue value : valueList) {
                 value.setSpuId(spuId);
-                value.setSaleAttrValueName(saleAttrName);
+                value.setSaleAttrName(saleAttrName);
                 spuSaleAttrValueService.save(value);
 
             }
         }
+
 
     }
 }

@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+spring:
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  main:
+    allow-bean-definition-overriding: true #允许bean定义信息重写。
+
+

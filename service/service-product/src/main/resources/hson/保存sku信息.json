@@ -1,0 +1,21 @@
+{
+    "id": null,
+    "spuId": 30,
+    "price": null,
+    "skuName": null,
+    "weight": null,
+    "skuDesc": null,
+    "category3Id": 61,
+    "skuAttrValueList": [ ],
+    "skuSaleAttrValueList": [
+        {
+            "saleAttrValueId": "120",
+            "saleAttrValueName": "黑色",
+            "baseSaleAttrId": "1",
+            "saleAttrName": "选择颜色"
+        }
+    ],
+    "skuImageList": [ ],
+    "skuDefaultImg": null,
+    "tmId": 21
+}

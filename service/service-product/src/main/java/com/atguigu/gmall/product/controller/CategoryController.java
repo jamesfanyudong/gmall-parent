@@ -2,12 +2,11 @@ package com.atguigu.gmall.product.controller;
 
 
 import com.atguigu.gmall.common.result.Result;
+import com.atguigu.gmall.product.service.BaseCategory3Service;
 import com.atguigu.gmall.model.product.BaseCategory1;
 import com.atguigu.gmall.model.product.BaseCategory2;
 import com.atguigu.gmall.model.product.BaseCategory3;
 import com.atguigu.gmall.product.service.BaseCategory1Service;
-import com.atguigu.gmall.product.service.BaseCategory2Service;
-import com.atguigu.gmall.product.service.BaseCategory3Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
