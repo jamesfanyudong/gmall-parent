@@ -1,7 +1,7 @@
 package com.atguigu.gmall.common.annation;
 
 
-import com.atguigu.gmall.common.config.RedissonConfig;
+import com.atguigu.gmall.cache.RedissonConfig;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;

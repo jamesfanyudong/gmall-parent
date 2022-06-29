@@ -1,5 +1,6 @@
 package com.atguigu.gmall.product.service.impl;
 
+import com.atguigu.gmall.common.constant.RedisConst;
 import com.atguigu.gmall.product.mapper.SkuInfoMapper;
 import com.atguigu.gmall.product.service.SkuImageService;
 import com.atguigu.gmall.product.service.SkuSaleAttrValueService;
@@ -10,12 +11,16 @@ import com.atguigu.gmall.model.product.SkuSaleAttrValue;
 import com.atguigu.gmall.product.service.SkuAttrValueService;
 import com.atguigu.gmall.product.service.SkuInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.redisson.api.RBloomFilter;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.concurrent.*;
 
 /**
  *
@@ -34,7 +39,49 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
     @Autowired
     SkuSaleAttrValueService skuSaleAttrValueService;
 
-    @Transactional
+    @Autowired
+    RedissonClient redissonClient;
+    @Autowired
+    StringRedisTemplate redisTemplate;
+
+//    static ThreadPoolExecutor threadPool = new ThreadPoolExecutor(
+//            2,
+//            4,
+//            10,
+//            TimeUnit.SECONDS,
+//            new ArrayBlockingQueue<Runnable>(1),
+//            new ThreadPoolExecutor.AbortPolicy()
+//    );
+
+    ScheduledExecutorService threadPool = Executors.newScheduledThreadPool(4);
+
+
+
+    /**
+     * 修改sku信息
+     * @param skuInfo
+     */
+    @Override
+    public void updateSkuInfo(SkuInfo skuInfo){
+        // 延迟双删
+        redisTemplate.delete(RedisConst.SKU_INFO_CACHE_KEY_PREFIX+skuInfo.getId());
+
+
+        // 调用一个定时线程
+
+        threadPool.schedule(new Runnable() {
+            @Override
+            public void run() {
+                redisTemplate.delete(RedisConst.SKU_INFO_CACHE_KEY_PREFIX+skuInfo.getId());
+            }
+        },10,TimeUnit.SECONDS);
+
+
+
+
+    }
+
+    @Transactional(rollbackFor = {RuntimeException.class})
     @Override
     public void saveSkuInfo(SkuInfo skuInfo) {
         // 保存基本基本信息
@@ -63,6 +110,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
             saleAttrValue.setSpuId(spuId);
             skuSaleAttrValueService.save(saleAttrValue);
         }
+        // 往布隆中存放skuid  数据库存一个，布隆就有一个
+        RBloomFilter<Object> filter = redissonClient.getBloomFilter(RedisConst.SKU_BLOOM_FILTER_NAME);
+        filter.add(skuId);
 
 
     }

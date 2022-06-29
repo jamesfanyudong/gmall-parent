@@ -1,8 +1,9 @@
 package com.atguigu.gmall.item.service.impl;
 
+import com.atguigu.gmall.cache.annotation.Cache;
+import com.atguigu.gmall.cache.component.CacheService;
 import com.atguigu.gmall.common.constant.RedisConst;
 import com.atguigu.gmall.common.result.Result;
-import com.atguigu.gmall.item.component.CacheService;
 import com.atguigu.gmall.item.service.ItemService;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SpuSaleAttr;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+
 @Service
 public class ItemServiceImpl implements ItemService {
 
@@ -29,8 +31,15 @@ public class ItemServiceImpl implements ItemService {
     RedissonClient redissonClient;
 
 
+    @Cache(key = RedisConst.SKU_INFO_CACHE_KEY_PREFIX+"#{#params[0]}"
+                ,bloomIf = RedisConst.SKU_BLOOM_FILTER_NAME)
     @Override
-    public SkuDetailVo getItemDetail(Long skuId){
+    public SkuDetailVo getItemDetail(Long skuId) {
+        return getItemDetailFromRpc(skuId);
+    }
+
+
+    public SkuDetailVo getItemDetailWithRedisson(Long skuId){
 
         String cacheKey = RedisConst.SKU_INFO_CACHE_KEY_PREFIX + skuId;
 
@@ -109,4 +118,6 @@ public class ItemServiceImpl implements ItemService {
         vo.setValuesSkuJson(value.getData());
         return vo;
     }
+
+
 }

@@ -1,5 +1,6 @@
 package com.atguigu.gmall.product.biz.impl;
 
+import com.atguigu.gmall.cache.annotation.Cache;
 import com.atguigu.gmall.common.util.Jsons;
 import com.atguigu.gmall.model.vo.CategoryVo;
 import com.atguigu.gmall.product.biz.CategoryBizService;
@@ -28,6 +29,7 @@ public class CategoryBizServiceImpl implements CategoryBizService {
 
 
 
+    @Cache(key = "categorys")
     @Override
     public List<CategoryVo> getCategorys() {
 

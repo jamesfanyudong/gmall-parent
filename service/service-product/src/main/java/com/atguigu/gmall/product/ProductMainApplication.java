@@ -6,6 +6,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.context.annotation.Import;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
@@ -13,8 +14,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @author fanyudong
  */
 
+@EnableScheduling
 @EnableRedisson
-@EnableTransactionManagement  //开启基于注解的自动事务管理
+@EnableTransactionManagement   //开启基于注解的自动事务管理
 @Import(Swagger2Config.class)
 @SpringCloudApplication
 @MapperScan(basePackages = "com.atguigu.gmall.product.mapper")
