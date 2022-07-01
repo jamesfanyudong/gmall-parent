@@ -1,0 +1,42 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: master,slave0,slave1
+      master:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.200.128:3306/gmall_product?useSSL=false&characterEncoding=utf-8
+        username: root
+        password: root
+      slave0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.200.128:3307/gmall_product?useSSL=false&characterEncoding=utf-8
+        username: root
+        password: root
+      slave1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.200.128:3308/gmall_product?useSSL=false&characterEncoding=utf-8
+        username: root
+        password: root
+    rules:
+      readwrite-splitting:
+       dataSources:
+         ms0s1:
+          type: Static
+          props:
+            write-data-source-name: master
+            read-data-source-names: slave0,slave1
+            load-balancer-name: guigu-lb
+
+      loadBalancers:
+        guigu-lb:
+          type: ROUND_ROBIN
+
+    props:
+      sql-show: true
+
+
+
+

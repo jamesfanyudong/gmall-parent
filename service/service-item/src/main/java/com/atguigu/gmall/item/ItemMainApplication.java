@@ -1,12 +1,10 @@
 package com.atguigu.gmall.item;
 
 
-import com.atguigu.gmall.cache.MallCacheAutoCofiguration;
-import com.atguigu.gmall.common.annation.EnableRedisson;
+import com.atguigu.gmall.starter.cache.annotation.EnableRedisson;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Import;
 
 
 //调谁扫谁。
@@ -16,7 +14,7 @@ import org.springframework.context.annotation.Import;
  * @author fanyudong
  */
 
-@Import(MallCacheAutoCofiguration.class)
+
 @EnableRedisson
 @SpringBootApplication
 @EnableFeignClients(basePackages = {"com.atguigu.gmall.product"})

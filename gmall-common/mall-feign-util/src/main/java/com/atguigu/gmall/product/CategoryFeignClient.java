@@ -10,7 +10,8 @@ import java.util.List;
 
 
 /**
- *   @FeignClient 代表这会是一次远程调用
+ *   @author fanyudong
+ * @FeignClient 代表这会是一次远程调用
  */
 
 @RequestMapping("/rpc/inner/product")

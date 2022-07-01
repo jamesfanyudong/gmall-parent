@@ -1,0 +1,9 @@
+com\atguigu\gmall\starter\cache\RedissonConfig.class
+com\atguigu\gmall\starter\cache\annotation\Cache.class
+com\atguigu\gmall\starter\cache\component\impl\CachServiceImpl.class
+com\atguigu\gmall\starter\cache\annotation\EnableCacheable.class
+com\atguigu\gmall\starter\cache\annotation\EnableRedisson.class
+com\atguigu\gmall\starter\cache\MallCacheAutoCofiguration.class
+com\atguigu\gmall\starter\cache\aspect\CacheAspect.class
+com\atguigu\gmall\starter\cache\component\CacheService.class
+com\atguigu\gmall\starter\cache\aspect\CacheAspect$1.class

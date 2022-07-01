@@ -1,10 +1,10 @@
 package com.atguigu.gmall.product.biz.impl;
 
-import com.atguigu.gmall.cache.annotation.Cache;
 import com.atguigu.gmall.common.util.Jsons;
 import com.atguigu.gmall.model.vo.CategoryVo;
 import com.atguigu.gmall.product.biz.CategoryBizService;
 import com.atguigu.gmall.product.mapper.CategoryBizMapper;
+import com.atguigu.gmall.starter.cache.annotation.Cache;
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +27,17 @@ public class CategoryBizServiceImpl implements CategoryBizService {
     StringRedisTemplate redisTemplate;
 
 
-
-
     @Cache(key = "categorys")
     @Override
-    public List<CategoryVo> getCategorys() {
+    public List<CategoryVo> getCategorys(){
+        List<CategoryVo> categorys = categoryBizMapper.getCategorys();
+        return categorys;
+
+    }
+
+
+
+    public List<CategoryVo> getCategorysFromCache() {
 
 
         // 先查缓存

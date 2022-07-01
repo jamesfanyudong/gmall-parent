@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 
 /**
  * 商品详情控制器
+ * @author fanyudong
  */
 @Controller
 public class ItemController {
@@ -43,8 +44,8 @@ public class ItemController {
         //        //10、商品介绍
         Result<SkuDetailVo> skuDetail = itemFeginClient.getSkuDetail(skuId);
         SkuDetailVo vo = skuDetail.getData();
-        SkuDetailVo data = skuDetail.getData();
-        if (data != null){
+
+        if (vo != null){
             model.addAttribute("categoryView",vo.getCategoryView());
             model.addAttribute("skuInfo",vo.getSkuInfo());
             // 实时获取商品价格

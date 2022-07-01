@@ -1,6 +1,7 @@
 package com.atguigu.gmall.product.service.impl;
 
 import com.atguigu.gmall.common.constant.RedisConst;
+import com.atguigu.gmall.model.list.Goods;
 import com.atguigu.gmall.product.mapper.SkuInfoMapper;
 import com.atguigu.gmall.product.service.SkuImageService;
 import com.atguigu.gmall.product.service.SkuSaleAttrValueService;
@@ -10,6 +11,7 @@ import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SkuSaleAttrValue;
 import com.atguigu.gmall.product.service.SkuAttrValueService;
 import com.atguigu.gmall.product.service.SkuInfoService;
+import com.atguigu.gmall.search.SearchFeignClient;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.redisson.api.RBloomFilter;
 import org.redisson.api.RedissonClient;
@@ -43,6 +45,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
     RedissonClient redissonClient;
     @Autowired
     StringRedisTemplate redisTemplate;
+
+    @Autowired
+    SearchFeignClient searchFeignClient;
 
 //    static ThreadPoolExecutor threadPool = new ThreadPoolExecutor(
 //            2,
@@ -79,6 +84,12 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
 
 
 
+    }
+
+    @Override
+    public Goods getGoodsInfoBySkuId(Long skuId) {
+       Goods goods =  skuInfoMapper.getGoodsInfoBySkuId(skuId);
+        return goods;
     }
 
     @Transactional(rollbackFor = {RuntimeException.class})
@@ -119,14 +130,20 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
 
     @Override
     public void onSale(Long skuId) {
-        // TODO 加入检索
+
+        // 数据保存到es
         skuInfoMapper.updateStatus(skuId,1);
+        Goods goods =  this.getGoodsInfoBySkuId(skuId);
+        searchFeignClient.up(goods);
+
+
     }
 
     @Override
     public void cancelSale(Long skuId) {
-        // TODO 加入检索
+
         skuInfoMapper.updateStatus(skuId,0);
+        searchFeignClient.down(skuId);
     }
 
     /**

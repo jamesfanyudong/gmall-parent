@@ -40,6 +40,10 @@ public class Jsons {
      * @return
      */
     public static<T> T toObj(String json, TypeReference<T> ref) {
+
+        if (StringUtils.isEmpty(json)){
+            return null;
+        }
         T t = null;
         try {
             t = mapper.readValue(json, ref);

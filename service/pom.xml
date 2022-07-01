@@ -15,6 +15,7 @@
         <module>service-product</module>
         <module>web-front</module>
         <module>service-item</module>
+        <module>service-search</module>
     </modules>
     <dependencies>
         <!--测试-->

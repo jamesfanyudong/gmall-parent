@@ -1,0 +1,8 @@
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\annotation\Cache.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\MallCacheAutoCofiguration.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\RedissonConfig.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\annotation\EnableCacheable.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\aspect\CacheAspect.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\component\CacheService.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\component\impl\CachServiceImpl.java
+I:\mall0106\gmall-parent\mall-cache-starter\src\main\java\com\atguigu\gmall\starter\cache\annotation\EnableRedisson.java

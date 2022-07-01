@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-util" />
+        <module name="service-search" />
         <module name="web-front" />
         <module name="server-gateway" />
         <module name="model" />
@@ -15,18 +16,21 @@
         <module name="mall-feign-util" />
         <module name="service-product" />
         <module name="service-item" />
+        <module name="mall-cache-starter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common-util" target="1.8" />
       <module name="gmall-common" target="1.8" />
       <module name="gmall-parent" target="1.8" />
+      <module name="mall-cache-starter" target="1.8" />
       <module name="mall-feign-util" target="1.8" />
       <module name="model" target="1.8" />
       <module name="server-gateway" target="1.8" />
       <module name="service" target="1.8" />
       <module name="service-item" target="1.8" />
       <module name="service-product" target="1.8" />
+      <module name="service-search" target="1.8" />
       <module name="service-util" target="1.8" />
       <module name="web-front" target="1.8" />
     </bytecodeTargetLevel>
@@ -35,12 +39,14 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-util" options="-parameters" />
       <module name="gmall-common" options="-parameters" />
+      <module name="mall-cache-starter" options="-parameters" />
       <module name="mall-feign-util" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="server-gateway" options="-parameters" />
       <module name="service" options="-parameters" />
       <module name="service-item" options="-parameters" />
       <module name="service-product" options="-parameters" />
+      <module name="service-search" options="-parameters" />
       <module name="service-util" options="-parameters" />
       <module name="web-front" options="-parameters" />
     </option>
