@@ -8,6 +8,6 @@ import lombok.Data;
  */
 @Data
 public class OrderMap {
-    private String type;
-    private String sort;
+    private String type = "1";
+    private String sort = "asc";
 }

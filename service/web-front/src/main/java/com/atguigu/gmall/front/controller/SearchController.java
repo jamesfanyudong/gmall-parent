@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
@@ -22,9 +23,15 @@ public class SearchController {
 
 
     @GetMapping("/list.html")
-    public String listPage(SearchParm searchParm ,Model model){
+    public String listPage(SearchParm searchParm ,Model model,HttpServletRequest request){
         Result<Map<String, Object>> result = searchFeignClient.search(searchParm);
         Map<String, Object> data = result.getData();
+        // 获取请求参数
+        String queryString = request.getQueryString();
+        model.addAttribute("urlParam","/list.html"+queryString);
+
+
+        model.addAllAttributes(data);
 
 
 

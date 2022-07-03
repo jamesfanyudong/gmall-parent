@@ -36,6 +36,8 @@ public class SearchResponseVo {
     private Long pageNo;
     // 总页码
     private long totalPages;
+    //返回路径
+    private String urlParam;
 
 
 
