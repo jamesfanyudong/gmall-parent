@@ -15,9 +15,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 
 
+
 @EnableRedisson
 @SpringBootApplication
-@EnableFeignClients(basePackages = {"com.atguigu.gmall.product"})
+@EnableFeignClients(basePackages = {"com.atguigu.gmall.product","com.atguigu.gmall.search"})
 public class ItemMainApplication {
     public static void main(String[] args) {
         SpringApplication.run(ItemMainApplication.class,args);

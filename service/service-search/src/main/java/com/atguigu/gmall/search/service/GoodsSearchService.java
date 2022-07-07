@@ -2,7 +2,7 @@ package com.atguigu.gmall.search.service;
 
 
 import com.atguigu.gmall.model.list.Goods;
-import com.atguigu.gmall.model.vo.search.SearchParm;
+import com.atguigu.gmall.model.vo.search.SearchParam;
 import com.atguigu.gmall.model.vo.search.SearchResponseVo;
 
 /**
@@ -13,5 +13,7 @@ public interface GoodsSearchService {
 
     void downGoods(Long skuId);
 
-    SearchResponseVo search(SearchParm searchParm);
+    SearchResponseVo search(SearchParam searchParm);
+
+    void incrHotScore(Long skuId, Long score);
 }

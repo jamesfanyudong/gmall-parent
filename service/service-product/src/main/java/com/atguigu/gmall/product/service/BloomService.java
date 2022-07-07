@@ -6,7 +6,13 @@ package com.atguigu.gmall.product.service;
  */
 public interface BloomService {
 
-    public void initBloom();
+    /**
+     * 初始化布隆过滤器
+     */
+     void initBloom();
 
-    public void rebuildSkuBloom();
+    /**
+     * 重建布隆
+     */
+    void rebuildSkuBloom();
 }

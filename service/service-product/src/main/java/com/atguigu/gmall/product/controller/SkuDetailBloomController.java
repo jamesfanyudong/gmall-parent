@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RequestMapping("/admin/product")
 @RestController
-public class BloomController {
+public class SkuDetailBloomController {
 
     @Autowired
     BloomService bloomService;

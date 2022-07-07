@@ -10,8 +10,10 @@ import lombok.Getter;
 public enum ResultCodeEnum {
 
     SUCCESS(200,"成功"),
+    NOAUTH_URL(2082,"非法请求，我们已经记录了你的行为"),
 
 
+    LOGIN_FAIL(203,"登陆失败"),
     FAIL(201, "失败"),
     SERVICE_ERROR(2012, "服务异常"),
 
@@ -30,7 +32,10 @@ public enum ResultCodeEnum {
     SECKILL_ORDER_SUCCESS(218, "下单成功"),
     COUPON_GET(220, "优惠券已经领取"),
     COUPON_LIMIT_GET(221, "优惠券已发放完毕"),
+    OUT_OF_CART(30001,"购物车已满")
     ;
+
+
 
     private Integer code;
 

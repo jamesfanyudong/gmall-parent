@@ -8,6 +8,7 @@ import com.atguigu.gmall.model.product.SpuSaleAttr;
 import com.atguigu.gmall.model.vo.CategoryView;
 import com.atguigu.gmall.model.vo.SkuDetailVo;
 import com.atguigu.gmall.product.SkuFeignClient;
+import com.atguigu.gmall.search.SearchFeignClient;
 import com.atguigu.gmall.starter.cache.annotation.Cache;
 import com.atguigu.gmall.starter.cache.component.CacheService;
 import lombok.SneakyThrows;
@@ -15,10 +16,12 @@ import org.redisson.api.RBloomFilter;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 
@@ -34,6 +37,12 @@ public class ItemServiceImpl implements ItemService {
     CacheService cacheService;
     @Autowired
     RedissonClient redissonClient;
+    @Autowired
+    RedisTemplate redisTemplate;
+    @Autowired
+    SearchFeignClient searchFeignClient;
+    @Autowired
+    ThreadPoolExecutor threadPoolExecutor;
 
 
     @Cache(key = RedisConst.SKU_INFO_CACHE_KEY_PREFIX+"#{#params[0]}"
@@ -43,6 +52,24 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public SkuDetailVo getItemDetail(Long skuId) {
         return getItemDetailFromRpc(skuId);
+    }
+
+    /**
+     * 增加热度分
+     * @param skuId
+     */
+    @Override
+    public void incrHotScore(Long skuId) {
+        //1.积攒热度分
+        Long increment = redisTemplate.opsForValue().increment(RedisConst.SKU_HOTSCORE + skuId);
+        if (increment % 100 == 0){
+            //更新频率不要频繁。异步
+            //理论上线程超过核心数的2倍，就再多就没意义。每一个异步不能上来就开线程
+            //线程池： 16  32  queue
+            CompletableFuture.runAsync(()->{
+                searchFeignClient.incrHotScore(skuId,increment);
+            },threadPoolExecutor);
+        }
     }
 
 

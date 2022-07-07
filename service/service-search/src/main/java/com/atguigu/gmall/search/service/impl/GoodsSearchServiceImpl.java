@@ -19,14 +19,14 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.SearchHits;
+import org.springframework.data.elasticsearch.core.document.Document;
 import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.Query;
+import org.springframework.data.elasticsearch.core.query.UpdateQuery;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -53,10 +53,10 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
     }
 
     @Override
-    public SearchResponseVo search(SearchParm searchParm) {
+    public SearchResponseVo search(SearchParam searchParam) {
 
         // 根据前端传来的参数检索
-        Query query = buildQuery(searchParm);
+        Query query = buildQuery(searchParam);
         /**
          * Query query：            查询条件
          * Class<T> clazz：         查到的数据封装成什么
@@ -66,11 +66,44 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         // 把检索的结果封装成前端能用的对象
 
 
-        return buildResponse(searchHits,searchParm);
+        return buildResponse(searchHits,searchParam);
+    }
+
+    /**
+     * 增加热度分
+     * @param skuId
+     * @param score
+     */
+
+    @Override
+    public void incrHotScore(Long skuId, Long score) {
+        //UpdateQuery query, IndexCoordinates index
+        // 构建查询条件
+        UpdateQuery query = buildHotScoreUpdateQuery(skuId,score);
+        restTemplate.update(query,IndexCoordinates.of("goods"));
+
+    }
+
+    /**
+     * 构建增加热度分的修改条件
+     * @param skuId：商品skuid
+     * @param score：商品现有的热度分
+     * @return
+     */
+    private UpdateQuery buildHotScoreUpdateQuery(Long skuId, Long score) {
+        //1. 拿到builder
+        UpdateQuery.Builder builder = UpdateQuery.builder("" + skuId);
+        // 2."hotScore":2
+        Map<String,Long> map = new HashMap<>();
+        map.put("hotScore",score);
+        builder.withDocument(Document.from(map))
+                .withDocAsUpsert(true);
+
+        return builder.build();
     }
 
     // 把检索的结果封装成前端能用的对象
-    private SearchResponseVo buildResponse(SearchHits<Goods> result, SearchParm searchParm) {
+    private SearchResponseVo buildResponse(SearchHits<Goods> result, SearchParam searchParam) {
 
         SearchResponseVo vo = new SearchResponseVo();
 
@@ -85,7 +118,7 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         vo.setGoodsList(list);
 
         //2.当前页面，总页数
-        vo.setPageNo(searchParm.getPageNo());
+        vo.setPageNo(searchParam.getPageNo());
         // 总记录数
         long hits = result.getTotalHits();
         long totalPages = hits % 10 ==0?hits / 10:(hits / 10) + 1;
@@ -94,13 +127,16 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
 
         //3.检索条件
 
-        vo.setSearchParm(searchParm);
+        vo.setSearchParam(searchParam);
+        // 构建url
+        String url = this.makeUrl(searchParam);
+        vo.setUrlParam(url);
 
         //4.品牌列表
         List<TradeMarkVo> tmList = new ArrayList<>();
         // 拿到所有聚合结果
         ParsedLongTerms tmIdAgg = result.getAggregations().get("tmIdAgg");
-        TradeMarkVo tradeMarkVo = new TradeMarkVo();
+
         tmIdAgg.getBuckets().forEach(bucket->{
             //4.1品牌id
             long tmId = bucket.getKeyAsNumber().longValue();
@@ -111,6 +147,8 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
             //4.3品牌logo
             ParsedStringTerms tmLogoAgg = bucket.getAggregations().get("tmLogoAgg");
             String tmLogo = tmLogoAgg.getBuckets().get(0).getKeyAsString();
+            // 封装vo
+            TradeMarkVo tradeMarkVo = new TradeMarkVo();
             tradeMarkVo.setTmId(tmId);
             tradeMarkVo.setTmName(tmName);
             tradeMarkVo.setTmLogoUrl(tmLogo);
@@ -121,10 +159,11 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
 
         //5、属性列表（属性的进阶检索）：分析聚合结果
         List<AttrSearchVo> attrsList = new ArrayList<>();
-        AttrSearchVo searchVo = new AttrSearchVo();
+
         ParsedNested attrAgg = result.getAggregations().get("attrAgg");
         ParsedLongTerms attrIdAgg = attrAgg.getAggregations().get("attrIdAgg");
         attrIdAgg.getBuckets().forEach(bucket->{
+            AttrSearchVo searchVo = new AttrSearchVo();
             // 5.1 属性id
             long attrId = bucket.getKeyAsNumber().longValue();
             ParsedStringTerms attrNameAgg = bucket.getAggregations().get("attrNameAgg");
@@ -147,30 +186,30 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         vo.setAttrsList(attrsList);
 
         // 1:小米；制作品牌面包屑
-        String trademark = searchParm.getTrademark();
+        String trademark = searchParam.getTrademark();
         if (!StringUtils.isEmpty(trademark)){
             vo.setTrademarkParam("品牌："+trademark.split(":")[1]);
         }
         // 属性面包屑
-        if (searchParm.getProps()!=null && searchParm.getProps().length>0){
-            String[] props = searchParm.getProps();
+        if (searchParam.getProps()!=null && searchParam.getProps().length>0){
+            String[] props = searchParam.getProps();
             //3:6GB:运行内存   4:64GB:机身存储
             //制作每个检索属性的面包屑
             List<AttrBread> breads = Arrays.stream(props).map(str -> {
                 String[] split = str.split(":");
                 AttrBread bread = new AttrBread();
                 bread.setAttrId(Long.parseLong(split[0]));
-                bread.setAttrName(split[2]);
                 bread.setAttrValue(split[1]);
+                bread.setAttrName(split[2]);
                 return bread;
             }).collect(Collectors.toList());
-           vo.setPropsParamList(breads);
+            vo.setPropsParamList(breads);
         }
         // order=2:desc
         //回显orderMap
-        String order = searchParm.getOrder();
+        String order = searchParam.getOrder();
         OrderMap orderMap = new OrderMap();
-        if (!StringUtils.isEmpty(order)){
+        if (!StringUtils.isEmpty(order) && !"null".equalsIgnoreCase(order)){
             orderMap.setType(order.split(":")[0]);
             orderMap.setSort(order.split(":")[1]);
         }
@@ -181,11 +220,53 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
     }
 
     /**
+     * 获取url
+     * @param param
+     * @return
+     */
+    private String makeUrl(SearchParam param) {
+        StringBuilder urlBuilder = new StringBuilder("/list.html?");
+        if(param.getPageNo()!=null){
+            // /list.html?pageNo=1
+            urlBuilder.append("&pageNo="+param.getPageNo());
+        }
+
+        if(param.getCategory1Id()!=null){
+            urlBuilder.append("&category1Id="+param.getCategory1Id());
+        }
+        if(param.getCategory2Id()!=null){
+            urlBuilder.append("&category2Id="+param.getCategory2Id());
+        }
+        if(param.getCategory3Id()!=null){
+            urlBuilder.append("&category3Id="+param.getCategory3Id());
+        }
+        if(!StringUtils.isEmpty(param.getKeyword())){
+            urlBuilder.append("&keyword="+param.getKeyword());
+        }
+        if(!StringUtils.isEmpty(param.getTrademark())){
+            urlBuilder.append("&trademark="+param.getTrademark());
+        }
+        if(param.getProps()!=null &&param.getProps().length>0 ){
+            Arrays.stream(param.getProps()).forEach(prop->{
+                urlBuilder.append("&props="+prop);
+            });
+        }
+//        if(!StringUtils.isEmpty(param.getOrder())){
+//            urlBuilder.append("&order="+param.getOrder());
+//        }
+
+
+
+        return urlBuilder.toString();
+
+    }
+
+    /**
      * 构建查询条件
      * @param parm
      * @return
      */
-    private Query buildQuery(SearchParm parm) {
+    private Query buildQuery(SearchParam parm) {
         BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
 
 
@@ -211,7 +292,7 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         // 模糊匹配 keyword
         if (!StringUtils.isEmpty(parm.getKeyword())){
 
-            boolQuery.must(QueryBuilders.matchQuery("keyword",parm.getKeyword()));
+            boolQuery.must(QueryBuilders.matchQuery("title",parm.getKeyword()));
         }
         //5、bool-must- 品牌的精确匹配
         if (!StringUtils.isEmpty(parm.getTrademark())){
@@ -219,7 +300,7 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
             boolQuery.must(QueryBuilders.termQuery("tmId",split[0]));
         }
         // 嵌入查询
-        if (parm.getProps().length>0 && parm.getProps()!=null){
+        if (parm.getProps()!=null && parm.getProps().length>0  ){
             Arrays.stream(parm.getProps()).forEach(prop->{
                 //["3:6GB:运行内存","4:64GB:机身存储"]
                         String[] split = prop.split(":");
@@ -274,6 +355,8 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         tmIdAgg.subAggregation(tmNameAgg);
         tmIdAgg.subAggregation(tmLogoAgg);
         dsl.addAggregation(tmIdAgg);
+
+
         //==分析：平台属性==
         NestedAggregationBuilder attrAgg = AggregationBuilders.nested("attrAgg", "attrs");
         TermsAggregationBuilder attrIdAgg = AggregationBuilders.terms("attrIdAgg")
@@ -285,9 +368,9 @@ public class GoodsSearchServiceImpl implements GoodsSearchService {
         TermsAggregationBuilder attrValueAgg = AggregationBuilders.terms("attrValueAgg")
                 .field("attrs.attrValue")
                 .size(100);
+        attrIdAgg.subAggregation(attrNameAgg);
+        attrIdAgg.subAggregation(attrValueAgg);
         attrAgg.subAggregation(attrIdAgg);
-        attrAgg.subAggregation(attrNameAgg);
-        attrAgg.subAggregation(attrValueAgg);
 
 
         dsl.addAggregation(attrAgg);

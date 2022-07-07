@@ -19,6 +19,11 @@ public class BloomConfiguration {
     @Autowired
     BloomService bloomService;
 
+    /**
+     * 第一次启动，初始化布隆
+     *
+     * @return
+     */
     @Bean
     public ApplicationRunner applicationRunner(){
         return new ApplicationRunner() {

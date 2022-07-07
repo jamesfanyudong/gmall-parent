@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "app.threadpool",
+      "type": "com.atguigu.gmall.item.config.ThreadPoolProperties",
+      "sourceType": "com.atguigu.gmall.item.config.ThreadPoolProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.threadpool.core-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.atguigu.gmall.item.config.ThreadPoolProperties",
+      "defaultValue": 4
+    },
+    {
+      "name": "app.threadpool.keep-alive-time",
+      "type": "java.lang.Long",
+      "sourceType": "com.atguigu.gmall.item.config.ThreadPoolProperties",
+      "defaultValue": 60
+    },
+    {
+      "name": "app.threadpool.maximum-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.atguigu.gmall.item.config.ThreadPoolProperties",
+      "defaultValue": 8
+    },
+    {
+      "name": "app.threadpool.work-queue-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.atguigu.gmall.item.config.ThreadPoolProperties",
+      "defaultValue": 200
+    }
+  ],
+  "hints": []
+}

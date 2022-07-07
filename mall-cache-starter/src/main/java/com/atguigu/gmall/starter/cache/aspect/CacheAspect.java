@@ -53,9 +53,9 @@ public class CacheAspect {
             // 前置通知
             // 1. 先查缓存
             // 计算key
-            String cacheKey = calculateKey(pjp);
+            Object cacheKey = calculateKey(pjp);
 
-            Object data = cacheService.getData(cacheKey, new TypeReference<Object>() {
+            Object data = cacheService.getData(cacheKey.toString(), new TypeReference<Object>() {
                 @Override
                 public Type getType() {
                     MethodSignature signature = (MethodSignature) pjp.getSignature();
@@ -71,16 +71,19 @@ public class CacheAspect {
             Cache cache = getCacheAnnotation(pjp, Cache.class);
             if (StringUtils.isEmpty(cache.bloomName())){
                 // 不适用布隆
-                return getDataWithLock(pjp, args, cacheKey);
+                return getDataWithLock(pjp, args, cacheKey.toString());
             }else{
                 // 使用布隆
-                // 不命中，查布隆
-                RBloomFilter<Object> filter = redissonClient.getBloomFilter(RedisConst.SKU_BLOOM_FILTER_NAME);
-                //获取布隆判定用的值
+                //4.1、拿到布隆，问有没有
+                RBloomFilter<Object> filter = redissonClient.getBloomFilter(cache.bloomName());
+                //4.2、获取布隆判定用的值。
                 Object bloomIfValue = getBloomIfValue(pjp);
                 if (filter.contains(bloomIfValue)){
-                    return getDataWithLock(pjp, args, cacheKey);
+                    //4.2、布隆说有
+                    //4.2.1、防止击穿，加锁
+                    return getDataWithLock(pjp, args, cacheKey.toString());
                 } else{
+                    //4.3、布隆说没有
                     return null;
                 }
                 // 布隆说没有 ，就没有
@@ -103,9 +106,7 @@ public class CacheAspect {
         // 得到布隆判定表达式
         String bloomIf = cacheAnnotation.bloomIf();
         // 得到最终的值
-        String key = cacheAnnotation.key();
-        String spElValue = calculateExpression(key, pjp).toString();
-        return spElValue;
+        return calculateExpression(bloomIf, pjp);
     }
 
 
@@ -137,19 +138,18 @@ public class CacheAspect {
 
 
 
-    private String calculateKey(ProceedingJoinPoint pjp) {
-        String spElValue = getKey(pjp);
-        return spElValue;
+    private Object calculateKey(ProceedingJoinPoint pjp) {
+        return getKey(pjp);
     }
 
-    private String getKey(ProceedingJoinPoint pjp) {
+    private Object getKey(ProceedingJoinPoint pjp) {
         // 拿到目标方法上的@cache
         Cache cache = getCacheAnnotation(pjp, Cache.class);
 
         // 得到key值
         String key = cache.key();
         // 5.计算表达式，得到最终的值
-        return calculateExpression(key,pjp).toString();
+        return calculateExpression(key,pjp);
     }
 
     /**
@@ -166,8 +166,10 @@ public class CacheAspect {
         // 2.准备一个计算上下文
         StandardEvaluationContext context = new StandardEvaluationContext();
         //支持的所有语法【动态扩展所有支持的属性】
-        context.setVariable("params",pjp.getArgs());// 所有参数列表
-        context.setVariable("redisson",redissonClient);//指向一个组件，可以无限调方法
+        context.setVariable("params",pjp.getArgs());
+        // 所有参数列表
+        //指向一个组件，可以无限调方法
+        context.setVariable("redisson",redissonClient);
 
 
         return expression.getValue(context, Object.class);

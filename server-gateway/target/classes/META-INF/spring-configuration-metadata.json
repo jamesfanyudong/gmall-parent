@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "app.auth",
+      "type": "com.atguigu.gmall.gateway.properties.AuthProperties",
+      "sourceType": "com.atguigu.gmall.gateway.properties.AuthProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.auth.login-page",
+      "type": "java.lang.String",
+      "sourceType": "com.atguigu.gmall.gateway.properties.AuthProperties"
+    },
+    {
+      "name": "app.auth.login-url",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.atguigu.gmall.gateway.properties.AuthProperties"
+    },
+    {
+      "name": "app.auth.no-auth-url",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.atguigu.gmall.gateway.properties.AuthProperties"
+    }
+  ],
+  "hints": []
+}

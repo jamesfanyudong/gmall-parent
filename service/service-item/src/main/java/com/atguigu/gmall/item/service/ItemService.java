@@ -6,4 +6,6 @@ public interface ItemService {
 
 
     SkuDetailVo getItemDetail(Long skuId);
+
+    void incrHotScore(Long skuId);
 }

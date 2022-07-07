@@ -1,7 +1,10 @@
 package com.atguigu.gmall.product.service.impl;
 
 import com.atguigu.gmall.common.constant.RedisConst;
+import com.atguigu.gmall.common.util.AuthContextHolder;
+import com.atguigu.gmall.model.cart.CartInfo;
 import com.atguigu.gmall.model.list.Goods;
+import com.atguigu.gmall.model.vo.user.UserAuth;
 import com.atguigu.gmall.product.mapper.SkuInfoMapper;
 import com.atguigu.gmall.product.service.SkuImageService;
 import com.atguigu.gmall.product.service.SkuSaleAttrValueService;
@@ -21,6 +24,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -90,6 +94,49 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
     public Goods getGoodsInfoBySkuId(Long skuId) {
        Goods goods =  skuInfoMapper.getGoodsInfoBySkuId(skuId);
         return goods;
+    }
+
+    /**
+     * 获取购物车信息
+     * @param skuId
+     * @return
+     */
+    @Override
+    public CartInfo getCartInfoBySkuId(Long skuId) {
+        CartInfo info = new CartInfo();
+        UserAuth userAuth = AuthContextHolder.getUserAuth();
+        if (userAuth.getUserId()!=null){
+            // 用户已登陆
+            info.setUserId(userAuth.getUserId().toString());
+        }else{
+            info.setUserId(userAuth.getTempId());
+        }
+        info.setSkuId(skuId);
+        info.setId(info.getId());
+
+        // 查价格
+        BigDecimal price = skuInfoMapper.getSkuPrice(skuId);
+        info.setCartPrice(price);
+
+        SkuInfo skuInfo = skuInfoMapper.selectById(skuId);
+        info.setImgUrl(skuInfo.getSkuDefaultImg());
+        info.setSkuName(skuInfo.getSkuName());
+
+        //默认被选中
+        info.setIsChecked(1);
+        info.setCreateTime(new Date());
+        info.setUpdateTime(new Date());
+        //商品实时价格
+        info.setSkuPrice(price);
+        info.setCouponInfoList(null);
+
+        return info;
+    }
+
+    @Override
+    public BigDecimal get1010Price(Long skuId) {
+        return skuInfoMapper.getSkuPrice(skuId);
+
     }
 
     @Transactional(rollbackFor = {RuntimeException.class})

@@ -12,10 +12,21 @@ spring:
             allowedMethods: "*"  #允许所有请求方式跨域访问
             allowedHeaders: "*"
       routes:
+        - id: incr_test
+          uri: lb://service-product
+          predicates:
+            - Path=/incr
+
         - id: product_route
           uri: lb://service-product
           predicates:
             - Path=/admin/product/**
+
+
+        - id: user_route
+          uri: lb://service-user
+          predicates:
+            - Path=/api/user/**
 
         - id: front_route
           uri: lb://web-front
@@ -23,4 +34,11 @@ spring:
             - Host=**.gmall.com
 
 
-
+app:
+  auth:
+    login-page: http://passport.gmall.com/login.html
+    login-url:
+      - /order/**
+      - /incr
+    no-auth-url:
+      - /rpc/inner/**   #内部的rpc请求浏览器不能直接访问

@@ -1,6 +1,7 @@
 package com.atguigu.gmall.product.rpc;
 
 import com.atguigu.gmall.common.result.Result;
+import com.atguigu.gmall.model.cart.CartInfo;
 import com.atguigu.gmall.model.dto.CategoryViewDo;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SpuSaleAttr;
@@ -36,6 +37,17 @@ public class SkuRpcController {
 
     @Autowired
     SpudeSkuSaleAttrBizService spudeSkuSaleAttrBizService;
+
+
+
+
+    @GetMapping("/cartinfo/{skuId}")
+    public Result<CartInfo> getCartInfoBySkuId(@PathVariable("skuId") Long skuId){
+        CartInfo info =  skuInfoService.getCartInfoBySkuId(skuId);
+        return Result.ok(info);
+
+    }
+
 
 
     /**
@@ -99,6 +111,18 @@ public class SkuRpcController {
     Result<BigDecimal> getSkuPrice(Long skuId){
 
       BigDecimal price =  skuInfoService.getSkuPrice(skuId);
+      return Result.ok(price);
+
+    }
+
+    /**
+     * 获取实时价格
+     * @param skuId
+     * @return
+     */
+    @GetMapping("/sku/price/{skuId}")
+    public Result get1010Price(@PathVariable("skuId") Long skuId){
+      BigDecimal price  = skuInfoService.get1010Price(skuId);
       return Result.ok(price);
 
     }

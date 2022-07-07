@@ -20,11 +20,12 @@ import lombok.Data;
  *      *      5、order=1:desc
  *      * 页码：
  *      *      6、pageNo=1
+ * @author fanyudong
  */
 
 
 @Data
-public class SearchParm {
+public class SearchParam {
 
     private Long category1Id;
     private Long category2Id;
@@ -33,7 +34,7 @@ public class SearchParm {
     private String trademark;
     private String order;
     private String[] props;
-    private Long pageNo;
+    private Long pageNo = 1L;
 
 
 

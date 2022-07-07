@@ -411,5 +411,6 @@
     <orderEntry type="library" name="Maven: io.zipkin.reporter2:zipkin-sender-kafka:2.15.0" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.reporter2:zipkin-sender-activemq-client:2.15.0" level="project" />
     <orderEntry type="library" name="Maven: io.zipkin.reporter2:zipkin-sender-amqp-client:2.15.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.3.1.RELEASE" level="project" />
   </component>
 </module>

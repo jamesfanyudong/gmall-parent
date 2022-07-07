@@ -2,10 +2,18 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="mall3306" uuid="30be1513-77c0-4852-9740-2ebdf2fd5f8a">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <database-info product="MySQL" version="5.7.36-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.36" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="gmall_order" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
     <data-source name="MySQL - @192.168.200.128" uuid="838840e0-2166-41fa-a9d7-646ebadf9b94">
       <database-info product="MySQL" version="5.7.36-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.36" exact-driver-version="8.0">
@@ -19,7 +27,9 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="@" />
+            <name qname="gmall_order" />
             <name qname="gmall_product" />
+            <name qname="gmall_user" />
           </node>
         </introspection-scope>
       </schema-mapping>

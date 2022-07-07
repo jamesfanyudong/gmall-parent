@@ -2,8 +2,9 @@ package com.atguigu.gmall.front.controller;
 
 
 import com.atguigu.gmall.common.result.Result;
-import com.atguigu.gmall.model.vo.search.SearchParm;
+import com.atguigu.gmall.model.vo.search.SearchParam;
 import com.atguigu.gmall.search.SearchFeignClient;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import java.util.Map;
 /**
  * @author fanyudong
  */
+@Slf4j
 @Controller
 public class SearchController {
 
@@ -23,21 +25,15 @@ public class SearchController {
 
 
     @GetMapping("/list.html")
-    public String listPage(SearchParm searchParm ,Model model,HttpServletRequest request){
+    public String listPage(SearchParam searchParm , Model model, HttpServletRequest request){
         Result<Map<String, Object>> result = searchFeignClient.search(searchParm);
         Map<String, Object> data = result.getData();
-        // 获取请求参数
-        String queryString = request.getQueryString();
-        model.addAttribute("urlParam","/list.html"+queryString);
-
-
         model.addAllAttributes(data);
-
-
-
         return "list/index";
 
     }
+
+
 
 
 

@@ -2,6 +2,7 @@ package com.atguigu.gmall.product;
 
 
 import com.atguigu.gmall.common.result.Result;
+import com.atguigu.gmall.model.cart.CartInfo;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.atguigu.gmall.model.product.SpuSaleAttr;
 import com.atguigu.gmall.model.vo.CategoryView;
@@ -16,6 +17,10 @@ import java.util.List;
 @RequestMapping("/rpc/inner/product")
 @FeignClient("service-product")
 public interface SkuFeignClient {
+
+
+    @GetMapping("/cartinfo/{skuId}")
+    public Result<CartInfo> getCartInfoBySkuId(@PathVariable("skuId") Long skuId);
 
 
     @GetMapping("/skuinfo/skuPrice/{skuId}")

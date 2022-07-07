@@ -1,6 +1,16 @@
+
 spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   elasticsearch:
     rest:
       uris: http://192.168.200.128:9200
+
+
+logging:
+  level:
+    root: info
+    tracer: trace  #打开追踪器
+    org.springframework.data.elasticsearch: trace
+server:
+  port: 11000

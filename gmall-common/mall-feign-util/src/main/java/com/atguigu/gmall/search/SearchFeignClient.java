@@ -3,7 +3,7 @@ package com.atguigu.gmall.search;
 
 import com.atguigu.gmall.common.result.Result;
 import com.atguigu.gmall.model.list.Goods;
-import com.atguigu.gmall.model.vo.search.SearchParm;
+import com.atguigu.gmall.model.vo.search.SearchParam;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +23,7 @@ public interface SearchFeignClient {
      */
 
     @PostMapping("/goods")
-    public Result<Map<String,Object>> search(@RequestBody SearchParm searchParm);
+    public Result<Map<String,Object>> search(@RequestBody SearchParam searchParm);
 //
 //    @PostMapping("/goods")
 //    public Result<SearchResponseVo> search(@RequestBody SearchParm searchParm);
@@ -43,6 +43,15 @@ public interface SearchFeignClient {
      */
     @GetMapping("/down/{skuId}")
     public Result down(@PathVariable("skuId") Long skuId);
+
+
+    /**
+     * 增加热度分
+     * @return
+     */
+    @GetMapping("/incr/hotscore/{skuId}")
+    public Result incrHotScore(@PathVariable("skuId") Long skuId,
+                               @RequestParam("score") Long score);
 
 
 

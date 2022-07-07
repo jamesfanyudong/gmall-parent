@@ -43,6 +43,7 @@ public class BloomServiceImpl implements BloomService {
         for (Long skuId : skuIds) {
             filter.add(skuId);
         }
+
         log.info("{} 布隆过滤器初始化完成：总计：{}",RedisConst.SKU_BLOOM_FILTER_NAME,skuIds.size());
 
     }

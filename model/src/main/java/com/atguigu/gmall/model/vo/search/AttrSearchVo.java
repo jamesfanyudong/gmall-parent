@@ -14,6 +14,8 @@ public class AttrSearchVo {
     private Long attrId;
 
     private String attrName;
+
+
     private List<String> attrValueList;
 
 

@@ -13,7 +13,7 @@ public class SearchResponseVo {
 
 
     // 此次检索用的所有参数
-    private SearchParm searchParm;
+    private SearchParam searchParam;
 
     // 品牌面包屑
     private String trademarkParam;

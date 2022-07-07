@@ -10,9 +10,11 @@
       <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-gateway/server-gateway.iml" filepath="$PROJECT_DIR$/server-gateway/server-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service-cart/service-cart.iml" filepath="$PROJECT_DIR$/service/service-cart/service-cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service-item/service-item.iml" filepath="$PROJECT_DIR$/service/service-item/service-item.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service-product/service-product.iml" filepath="$PROJECT_DIR$/service/service-product/service-product.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service-search/service-search.iml" filepath="$PROJECT_DIR$/service/service-search/service-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service/service-user/service-user.iml" filepath="$PROJECT_DIR$/service/service-user/service-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-common/service-util/service-util.iml" filepath="$PROJECT_DIR$/gmall-common/service-util/service-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/web-front/web-front.iml" filepath="$PROJECT_DIR$/service/web-front/web-front.iml" />
     </modules>
