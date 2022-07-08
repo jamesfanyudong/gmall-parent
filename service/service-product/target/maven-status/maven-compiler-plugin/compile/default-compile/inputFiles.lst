@@ -51,7 +51,6 @@ I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\service\impl\SkuImageServiceImpl.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\rpc\SkuRpcController.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\controller\CategoryController.java
-I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\controller\BloomController.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\mapper\BaseAttrInfoMapper.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\biz\SpudeSkuSaleAttrBizService.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\exception\GlobalExceptionHandler.java
@@ -68,6 +67,7 @@ I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\mapper\SpuSaleAttrMapper.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\service\SkuAttrValueService.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\service\impl\BloomServiceImpl.java
+I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\controller\SkuDetailBloomController.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\service\impl\SkuSaleAttrValueServiceImpl.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\config\MybatisPlusConfig.java
 I:\mall0106\gmall-parent\service\service-product\src\main\java\com\atguigu\gmall\product\mapper\SpuSaleAttrValueMapper.java

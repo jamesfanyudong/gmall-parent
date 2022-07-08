@@ -29,9 +29,24 @@ public class CartController {
                            Model model){
 
         Result<AddSuccessVo> result = cartFeignClient.addSkuToCart(skuId, skuNum);
+
         model.addAttribute("skuInfo",result.getData());
         model.addAttribute("skuNum",skuNum);
         return "cart/addCart";
 
     }
+
+    @GetMapping("/cart.html")
+    public String cartList(){
+
+        return "cart/index";
+    }
+
+    @GetMapping("/cart/deleteChecked")
+    public String deleteChecked(){
+        cartFeignClient.deleteChecked();
+        return "cart/index";
+    }
+
+
 }

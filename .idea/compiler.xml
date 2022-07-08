@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common-util" />
         <module name="service-cart" />
-        <module name="service-search" />
-        <module name="server-gateway" />
-        <module name="model" />
-        <module name="web-front" />
-        <module name="service-util" />
-        <module name="mall-feign-util" />
-        <module name="service-product" />
-        <module name="service-item" />
-        <module name="service-user" />
         <module name="mall-cache-starter" />
+        <module name="ware-manage" />
+        <module name="common-util" />
+        <module name="service-order" />
+        <module name="service-util" />
+        <module name="service-user" />
+        <module name="mall-feign-util" />
+        <module name="service-search" />
+        <module name="service-product" />
+        <module name="web-front" />
+        <module name="model" />
+        <module name="service-item" />
+        <module name="server-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,10 +34,12 @@
       <module name="service" target="1.8" />
       <module name="service-cart" target="1.8" />
       <module name="service-item" target="1.8" />
+      <module name="service-order" target="1.8" />
       <module name="service-product" target="1.8" />
       <module name="service-search" target="1.8" />
       <module name="service-user" target="1.8" />
       <module name="service-util" target="1.8" />
+      <module name="ware-manage" target="1.8" />
       <module name="web-front" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -50,10 +54,12 @@
       <module name="service" options="-parameters" />
       <module name="service-cart" options="-parameters" />
       <module name="service-item" options="-parameters" />
+      <module name="service-order" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-search" options="-parameters" />
       <module name="service-user" options="-parameters" />
       <module name="service-util" options="-parameters" />
+      <module name="ware-manage" options="-parameters" />
       <module name="web-front" options="-parameters" />
     </option>
   </component>

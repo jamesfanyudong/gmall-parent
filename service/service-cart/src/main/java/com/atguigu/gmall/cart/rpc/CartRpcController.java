@@ -2,9 +2,12 @@ package com.atguigu.gmall.cart.rpc;
 
 import com.atguigu.gmall.cart.service.CartInfoService;
 import com.atguigu.gmall.common.result.Result;
+import com.atguigu.gmall.model.cart.CartInfo;
 import com.atguigu.gmall.model.vo.cart.AddSuccessVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author fanyudong
@@ -31,4 +34,26 @@ public class CartRpcController {
 
 
     }
+
+
+    @GetMapping("/delete/checked")
+    Result deleteChecked(){
+        cartInfoService.deleteChecked();
+        return Result.ok();
+
+    }
+
+    @GetMapping("/checked/item")
+    Result<List<CartInfo>> getCheckedCartItem(){
+        String cartKey = cartInfoService.determinCartKey();
+
+      List<CartInfo> item =   cartInfoService.getAllCheckedItem(cartKey);
+      return Result.ok(item);
+
+
+
+    }
+
+
+
 }

@@ -109,7 +109,7 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoMapper, SkuInfo>
             // 用户已登陆
             info.setUserId(userAuth.getUserId().toString());
         }else{
-            info.setUserId(userAuth.getTempId());
+            info.setUserId(userAuth.getUserTempId());
         }
         info.setSkuId(skuId);
         info.setId(info.getId());

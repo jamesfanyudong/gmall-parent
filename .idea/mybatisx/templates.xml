@@ -6,7 +6,7 @@
         <option name="generateConfig">
           <GenerateConfig>
             <option name="annotationType" value="MYBATIS_PLUS3" />
-            <option name="basePackage" value="com.atguigu.gmall.cart" />
+            <option name="basePackage" value="com.atguigu.gmall.order" />
             <option name="basePath" value="src/main/java" />
             <option name="encoding" value="UTF-8" />
             <option name="extraClassSuffix" value="" />
@@ -14,8 +14,8 @@
             <option name="ignoreFieldSuffix" value="" />
             <option name="ignoreTablePrefix" value="" />
             <option name="ignoreTableSuffix" value="" />
-            <option name="moduleName" value="service-cart" />
-            <option name="modulePath" value="$PROJECT_DIR$/service/service-cart" />
+            <option name="moduleName" value="service-order" />
+            <option name="modulePath" value="$PROJECT_DIR$/service/service-order" />
             <option name="moduleUIInfoList">
               <list>
                 <ModuleUIInfo>
@@ -24,7 +24,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}Mapper" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.java" />
-                  <option name="modulePath" value="$PROJECT_DIR$/service/service-cart" />
+                  <option name="modulePath" value="$PROJECT_DIR$/service/service-order" />
                   <option name="packageName" value="${domain.basePackage}.mapper" />
                 </ModuleUIInfo>
                 <ModuleUIInfo>
@@ -33,7 +33,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}Mapper" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.xml" />
-                  <option name="modulePath" value="$PROJECT_DIR$/service/service-cart" />
+                  <option name="modulePath" value="$PROJECT_DIR$/service/service-order" />
                   <option name="packageName" value="mapper" />
                 </ModuleUIInfo>
                 <ModuleUIInfo>
@@ -42,7 +42,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}ServiceImpl" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}ServiceImpl.java" />
-                  <option name="modulePath" value="$PROJECT_DIR$/service/service-cart" />
+                  <option name="modulePath" value="$PROJECT_DIR$/service/service-order" />
                   <option name="packageName" value="${domain.basePackage}.service.impl" />
                 </ModuleUIInfo>
                 <ModuleUIInfo>
@@ -51,7 +51,7 @@
                   <option name="encoding" value="${domain.encoding}" />
                   <option name="fileName" value="${domain.fileName}Service" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Service.java" />
-                  <option name="modulePath" value="$PROJECT_DIR$/service/service-cart" />
+                  <option name="modulePath" value="$PROJECT_DIR$/service/service-order" />
                   <option name="packageName" value="${domain.basePackage}.service" />
                 </ModuleUIInfo>
               </list>
@@ -62,8 +62,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="CartInfo" />
-                  <option name="tableName" value="cart_info" />
+                  <option name="className" value="PaymentInfo" />
+                  <option name="tableName" value="payment_info" />
                 </TableUIInfo>
               </list>
             </option>
@@ -71,7 +71,7 @@
             <option name="useLombokPlugin" value="true" />
           </GenerateConfig>
         </option>
-        <option name="moduleName" value="service-cart" />
+        <option name="moduleName" value="service-order" />
         <option name="projectPath" value="$PROJECT_DIR$" />
         <option name="templateName" value="mybatis-plus3" />
       </TemplateContext>

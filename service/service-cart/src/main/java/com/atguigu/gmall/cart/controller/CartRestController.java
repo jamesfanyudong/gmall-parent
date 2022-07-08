@@ -39,7 +39,7 @@ public class CartRestController {
     @PostMapping("/addToCart/{skuId}/{num}")
     public Result addToCart(@PathVariable("skuId")Long skuId,
                             @PathVariable("num")Integer num){
-        cartInfoService.addToCart(skuId,num);
+        cartInfoService.addToCart(skuId, num);
         return Result.ok();
     }
     /**

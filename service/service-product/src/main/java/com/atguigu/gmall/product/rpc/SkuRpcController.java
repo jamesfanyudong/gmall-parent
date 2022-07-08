@@ -108,7 +108,7 @@ public class SkuRpcController {
 
 
     @GetMapping("/skuinfo/skuPrice/{skuId}")
-    Result<BigDecimal> getSkuPrice(Long skuId){
+    Result<BigDecimal> getSkuPrice(@PathVariable("skuId") Long skuId){
 
       BigDecimal price =  skuInfoService.getSkuPrice(skuId);
       return Result.ok(price);
@@ -121,7 +121,7 @@ public class SkuRpcController {
      * @return
      */
     @GetMapping("/sku/price/{skuId}")
-    public Result get1010Price(@PathVariable("skuId") Long skuId){
+    public Result<BigDecimal> get1010Price(@PathVariable("skuId") Long skuId){
       BigDecimal price  = skuInfoService.get1010Price(skuId);
       return Result.ok(price);
 

@@ -1,1 +1,4 @@
 com\atguigu\gmall\gateway\GatewayMainApplication.class
+com\atguigu\gmall\gateway\filter\GlobalAuthFilter.class
+com\atguigu\gmall\gateway\properties\AuthProperties.class
+META-INF\spring-configuration-metadata.json

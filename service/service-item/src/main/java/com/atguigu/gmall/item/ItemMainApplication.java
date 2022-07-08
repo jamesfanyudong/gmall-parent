@@ -1,6 +1,7 @@
 package com.atguigu.gmall.item;
 
 
+import com.atguigu.gmall.common.annotation.EnableThreadPool;
 import com.atguigu.gmall.starter.cache.annotation.EnableRedisson;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 
 
-
+@EnableThreadPool
 @EnableRedisson
 @SpringBootApplication
 @EnableFeignClients(basePackages = {"com.atguigu.gmall.product","com.atguigu.gmall.search"})

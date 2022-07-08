@@ -6,5 +6,6 @@ com\atguigu\gmall\common\constant\RedisConst.class
 com\atguigu\gmall\common\execption\GmallException.class
 com\atguigu\gmall\common\result\ResultCodeEnum.class
 com\atguigu\gmall\common\util\DateUtil.class
+com\atguigu\gmall\common\retry\RequestNeverRetryer.class
 com\atguigu\gmall\common\util\Jsons.class
 com\atguigu\gmall\common\util\MD5.class

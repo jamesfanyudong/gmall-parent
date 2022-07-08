@@ -20,11 +20,11 @@ public interface SkuFeignClient {
 
 
     @GetMapping("/cartinfo/{skuId}")
-    public Result<CartInfo> getCartInfoBySkuId(@PathVariable("skuId") Long skuId);
+     Result<CartInfo> getCartInfoBySkuId(@PathVariable("skuId") Long skuId);
 
 
     @GetMapping("/skuinfo/skuPrice/{skuId}")
-    Result<BigDecimal> getSkuPrice(Long skuId);
+    Result<BigDecimal> getSkuPrice(@PathVariable("skuId") Long skuId);
 
 
     /**
@@ -59,7 +59,16 @@ public interface SkuFeignClient {
      */
 
     @GetMapping("/spu/skus/saleattrvalue/json/{spuId}")
-    public Result<String> getSpudeAllSkuSaleAttrAndValue(@PathVariable("spuId") Long spuId);
+     Result<String> getSpudeAllSkuSaleAttrAndValue(@PathVariable("spuId") Long spuId);
+
+
+    /**
+     * 获取实时价格
+     * @param skuId
+     * @return
+     */
+    @GetMapping("/sku/price/{skuId}")
+    Result<BigDecimal> get1010Price(@PathVariable("skuId") Long skuId);
 
 
 

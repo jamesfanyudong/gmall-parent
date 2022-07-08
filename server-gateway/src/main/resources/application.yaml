@@ -22,11 +22,18 @@ spring:
           predicates:
             - Path=/admin/product/**
 
-
         - id: user_route
           uri: lb://service-user
           predicates:
             - Path=/api/user/**
+
+        - id: cart_route
+          uri: lb://service-cart
+          predicates:
+            - Path=/api/cart/**
+
+
+
 
         - id: front_route
           uri: lb://web-front
@@ -40,5 +47,6 @@ app:
     login-url:
       - /order/**
       - /incr
+      - /cart.html
     no-auth-url:
       - /rpc/inner/**   #内部的rpc请求浏览器不能直接访问

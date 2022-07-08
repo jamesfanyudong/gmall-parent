@@ -103,6 +103,7 @@ public class CartInfoServiceImpl implements CartInfoService {
                 //5. 删除临时购物车
                 redisTemplate.delete(RedisConst.CART_INFO_PREFIX + auth.getUserTempId());
 
+
             }
         }
             String cartKey = determinCartKey();
@@ -127,11 +128,7 @@ public class CartInfoServiceImpl implements CartInfoService {
                         //同步到redis
                         saveItemToCart(item,cartKey);
                     }
-
-
-                });
-
-
+               });
             });
 
             return allItem;
@@ -164,6 +161,24 @@ public class CartInfoServiceImpl implements CartInfoService {
     public void deleteCartItem(Long skuId) {
         String cartKey = determinCartKey();
         redisTemplate.opsForHash().delete(cartKey,skuId.toString());
+    }
+
+    /**
+     * 删除选中商品
+     */
+    @Override
+    public void deleteChecked() {
+
+        String cartKey = determinCartKey();
+        //1、找到购物车总所有被选中的商品，并删除他们
+        List<CartInfo> cartAllItem = getCartAllItem(cartKey);
+        Object[] ids = cartAllItem.stream()
+                .map(info -> info.getSkuId().toString())
+                .toArray();
+        //2、删除他们
+        HashOperations<String, String, String> ops = redisTemplate.opsForHash();
+        ops.delete(cartKey,ids);
+
     }
 
     /**
@@ -237,7 +252,8 @@ public class CartInfoServiceImpl implements CartInfoService {
      * 决定使用哪个购物车
      * @return
      */
-    private String determinCartKey() {
+    @Override
+    public String determinCartKey() {
         //1.拿到用户信息
         UserAuth userAuth = AuthContextHolder.getUserAuth();
         String cartKey = "";
@@ -253,6 +269,23 @@ public class CartInfoServiceImpl implements CartInfoService {
 
         return cartKey;
 
+    }
+
+    /**
+     * 获取选中的商品
+     * @param cartKey
+     * @return
+     */
+    @Override
+    public List<CartInfo> getAllCheckedItem(String cartKey) {
+
+        HashOperations<String, String, String> ops = redisTemplate.opsForHash();
+        List<CartInfo> collect = ops.values(cartKey)
+                .stream()
+                .map(jsonStr -> Jsons.toObj(jsonStr, CartInfo.class))
+                .filter(info -> info.getIsChecked() == 1)
+                .collect(Collectors.toList());
+        return collect;
     }
 
 

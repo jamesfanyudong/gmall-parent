@@ -1,0 +1,19 @@
+server:
+  port: 14000
+spring:
+  profiles:
+    include: sharding
+  main:
+    allow-bean-definition-overriding: true
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,6 @@
 I:\mall0106\gmall-parent\gmall-common\service-util\src\main\java\com\atguigu\gmall\common\config\RedisConfig.java
+I:\mall0106\gmall-parent\gmall-common\service-util\src\main\java\com\atguigu\gmall\common\interceptor\RequestHeaderSetFeignIntercetpor.java
+I:\mall0106\gmall-parent\gmall-common\service-util\src\main\java\com\atguigu\gmall\common\annotation\EnableFeignInterceptor.java
 I:\mall0106\gmall-parent\gmall-common\service-util\src\main\java\com\atguigu\gmall\common\config\Swagger2Config.java
 I:\mall0106\gmall-parent\gmall-common\service-util\src\main\java\com\atguigu\gmall\common\handler\GlobalExceptionHandler.java
 I:\mall0106\gmall-parent\gmall-common\service-util\src\main\java\com\atguigu\gmall\common\config\MybatisPlusConfig.java

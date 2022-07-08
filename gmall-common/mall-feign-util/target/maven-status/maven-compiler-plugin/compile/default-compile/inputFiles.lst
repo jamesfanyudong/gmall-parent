@@ -1,3 +1,5 @@
 I:\mall0106\gmall-parent\gmall-common\mall-feign-util\src\main\java\com\atguigu\gmall\product\CategoryFeignClient.java
 I:\mall0106\gmall-parent\gmall-common\mall-feign-util\src\main\java\com\atguigu\gmall\product\SkuFeignClient.java
+I:\mall0106\gmall-parent\gmall-common\mall-feign-util\src\main\java\com\atguigu\gmall\search\SearchFeignClient.java
+I:\mall0106\gmall-parent\gmall-common\mall-feign-util\src\main\java\com\atguigu\gmall\cart\CartFeignClient.java
 I:\mall0106\gmall-parent\gmall-common\mall-feign-util\src\main\java\com\atguigu\gmall\item\ItemFeginClient.java

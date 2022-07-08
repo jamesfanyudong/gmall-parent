@@ -1,3 +1,5 @@
+com\atguigu\gmall\cart\CartFeignClient.class
+com\atguigu\gmall\item\ItemFeginClient.class
+com\atguigu\gmall\search\SearchFeignClient.class
 com\atguigu\gmall\product\SkuFeignClient.class
 com\atguigu\gmall\product\CategoryFeignClient.class
-com\atguigu\gmall\item\ItemFeginClient.class

@@ -1,4 +1,6 @@
 com\atguigu\gmall\front\WebFrontMainApplication.class
+com\atguigu\gmall\front\controller\SearchController.class
+com\atguigu\gmall\front\controller\CartController.class
 com\atguigu\gmall\front\controller\LoginController.class
 com\atguigu\gmall\front\controller\ItemController.class
 com\atguigu\gmall\front\controller\IndexController.class

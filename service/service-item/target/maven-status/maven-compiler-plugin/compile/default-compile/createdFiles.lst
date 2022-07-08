@@ -1,4 +1,8 @@
 com\atguigu\gmall\item\service\impl\ItemServiceImpl.class
+com\atguigu\gmall\item\ItemMainApplication.class
+com\atguigu\gmall\item\config\ThreadPoolProperties.class
 com\atguigu\gmall\item\service\ItemService.class
 com\atguigu\gmall\item\rpc\ItemRpcController.class
-com\atguigu\gmall\item\ItemMainApplication.class
+com\atguigu\gmall\item\config\AppThreadPoolConfig$1.class
+META-INF\spring-configuration-metadata.json
+com\atguigu\gmall\item\config\AppThreadPoolConfig.class

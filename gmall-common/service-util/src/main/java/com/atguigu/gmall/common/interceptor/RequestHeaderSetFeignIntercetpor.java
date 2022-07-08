@@ -29,7 +29,7 @@ public class RequestHeaderSetFeignIntercetpor implements RequestInterceptor {
                 //请求头名
                 String headerName = headerNames.nextElement();
                 String headerValue = request.getHeader(headerName);
-                if ("UserTempId".equalsIgnoreCase(headerName) || "userId".equalsIgnoreCase(headerName)){
+                if ("userTempId".equalsIgnoreCase(headerName) || "userId".equalsIgnoreCase(headerName)){
                     //存到模板请求头中
                     template.header(headerName,headerValue);
                 }

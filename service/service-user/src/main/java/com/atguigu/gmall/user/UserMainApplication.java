@@ -9,6 +9,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  */
 
 @MapperScan("com.atguigu.gmall.user.mapper")
+
 @SpringCloudApplication
 public class UserMainApplication {
 

@@ -22,4 +22,9 @@ public interface CartInfoService  {
     void updateCartItemStatus(Long skuId, Integer status);
 
     void deleteCartItem(Long skuId);
+
+    void deleteChecked();
+    String determinCartKey();
+
+    List<CartInfo> getAllCheckedItem(String cartKey);
 }

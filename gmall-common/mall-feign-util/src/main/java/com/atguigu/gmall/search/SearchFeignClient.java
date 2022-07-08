@@ -23,7 +23,7 @@ public interface SearchFeignClient {
      */
 
     @PostMapping("/goods")
-    public Result<Map<String,Object>> search(@RequestBody SearchParam searchParm);
+     Result<Map<String,Object>> search(@RequestBody SearchParam searchParm);
 //
 //    @PostMapping("/goods")
 //    public Result<SearchResponseVo> search(@RequestBody SearchParm searchParm);

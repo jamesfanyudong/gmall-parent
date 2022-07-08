@@ -82,7 +82,7 @@ public class GlobalAuthFilter implements GlobalFilter {
         //request 是不允许改的。我们需要创建一个新的
         ServerWebExchange newExchange = exchange.mutate()
                 .request(request.mutate()
-                        .header("UserTempId", tempId)
+                        .header("userTempId", tempId)
                         .build())
                 .response(response)
                 .build();
@@ -129,8 +129,8 @@ public class GlobalAuthFilter implements GlobalFilter {
            //5、放行之前，需要给请求头中加一个 UserId 字段。
            //request 是不允许改的。我们需要创建一个新的
            ServerHttpRequest newReq = request.mutate()
-                   .header("UserId", id.toString())
-                   .header("UserTempId", tempId)
+                   .header("userId", id.toString())
+                   .header("userTempId", tempId)
                    .build();
            ServerWebExchange newExchange = exchange.mutate()
                    .request(newReq)

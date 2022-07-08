@@ -19,5 +19,5 @@ import java.util.List;
 public interface CategoryFeignClient {
 
     @GetMapping("/categorys/all")
-    public Result<List<CategoryVo>> getCategorys();
+     Result<List<CategoryVo>> getCategorys();
 }

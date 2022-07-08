@@ -1,0 +1,7 @@
+com\atguigu\gmall\search\SearchMainApplication.class
+com\atguigu\gmall\search\repo\GoodsRepo.class
+com\atguigu\gmall\search\service\impl\GoodsSearchServiceImpl.class
+com\atguigu\gmall\search\service\GoodsSearchService.class
+com\atguigu\gmall\search\repo\PersonRepo.class
+com\atguigu\gmall\search\rpc\SearchController.class
+com\atguigu\gmall\search\bean\Person.class

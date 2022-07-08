@@ -6,6 +6,7 @@ com\atguigu\gmall\product\service\SpuSaleAttrService.class
 com\atguigu\gmall\product\rpc\CategoryRpcController.class
 com\atguigu\gmall\product\controller\SaleAttrController.class
 com\atguigu\gmall\product\service\impl\BaseCategory3ServiceImpl.class
+META-INF\spring-configuration-metadata.json
 com\atguigu\gmall\product\service\impl\SpuInfoServiceImpl.class
 com\atguigu\gmall\product\service\BaseAttrInfoService.class
 com\atguigu\gmall\product\service\CategoryViewService.class
@@ -36,11 +37,11 @@ com\atguigu\gmall\product\mapper\BaseAttrValueMapper.class
 com\atguigu\gmall\product\service\BaseTrademarkService.class
 com\atguigu\gmall\product\config\MybatisPlusConfig.class
 com\atguigu\gmall\product\service\impl\SpuPosterServiceImpl.class
+com\atguigu\gmall\product\controller\SkuDetailBloomController.class
 com\atguigu\gmall\product\service\BaseCategory3Service.class
 com\atguigu\gmall\product\mapper\SkuAttrValueMapper.class
 com\atguigu\gmall\product\mapper\SpuInfoMapper.class
 com\atguigu\gmall\product\exception\GlobalExceptionHandler.class
-com\atguigu\gmall\product\controller\BloomController.class
 com\atguigu\gmall\product\mapper\SpuSaleAttrValueMapper.class
 com\atguigu\gmall\product\service\impl\BaseAttrValueServiceImpl.class
 com\atguigu\gmall\product\mapper\SpuSaleAttrMapper.class

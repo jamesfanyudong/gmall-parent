@@ -20,6 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author fanyudong
+ */
 @Data
 @ApiModel(description = "订单信息")
 @TableName("order_info")
@@ -29,6 +32,15 @@ public class OrderInfo extends BaseEntity {
     @ApiModelProperty(value = "收货人")
     @TableField("consignee")
     private String consignee;
+
+
+
+
+
+    @ApiModelProperty(value = "用户id")
+    @TableField("user_id")
+    private Long userId;
+
 
     @ApiModelProperty(value = "收件人电话")
     @TableField("consignee_tel")
@@ -42,9 +54,7 @@ public class OrderInfo extends BaseEntity {
     @TableField("order_status")
     private String orderStatus;
 
-    @ApiModelProperty(value = "用户id")
-    @TableField("user_id")
-    private Long userId;
+
 
     @ApiModelProperty(value = "付款方式")
     @TableField("payment_way")

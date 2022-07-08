@@ -1,0 +1,8 @@
+com\atguigu\gmall\user\mapper\UserAddressMapper.class
+com\atguigu\gmall\user\service\UserInfoService.class
+com\atguigu\gmall\user\controller\LoginController.class
+com\atguigu\gmall\user\service\UserAddressService.class
+com\atguigu\gmall\user\mapper\UserInfoMapper.class
+com\atguigu\gmall\user\service\impl\UserInfoServiceImpl.class
+com\atguigu\gmall\user\UserMainApplication.class
+com\atguigu\gmall\user\service\impl\UserAddressServiceImpl.class
