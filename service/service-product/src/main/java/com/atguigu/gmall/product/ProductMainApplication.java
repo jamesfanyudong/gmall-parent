@@ -1,5 +1,6 @@
 package com.atguigu.gmall.product;
 
+import com.atguigu.gmall.common.config.MybatisPlusConfig;
 import com.atguigu.gmall.common.config.Swagger2Config;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableScheduling
 @EnableTransactionManagement   //开启基于注解的自动事务管理
-@Import(Swagger2Config.class)
+@Import({Swagger2Config.class,MybatisPlusConfig.class})
 @SpringCloudApplication
 @MapperScan(basePackages = "com.atguigu.gmall.product.mapper")
 @EnableFeignClients(basePackages = "com.atguigu.gmall.search")

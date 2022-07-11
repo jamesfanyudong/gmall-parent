@@ -14,5 +14,6 @@ public class CartOrderDetailVo {
     private String skuName;
     private BigDecimal orderPrice;
     private Integer skuNum;
+    private Long skuId;
     private String stock; //1有货、无货0
 }

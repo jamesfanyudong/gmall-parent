@@ -13,6 +13,7 @@
         <module name="common-util" />
         <module name="service-order" />
         <module name="service-util" />
+        <module name="service-pay" />
         <module name="service-user" />
         <module name="mall-feign-util" />
         <module name="service-search" />
@@ -35,6 +36,7 @@
       <module name="service-cart" target="1.8" />
       <module name="service-item" target="1.8" />
       <module name="service-order" target="1.8" />
+      <module name="service-pay" target="1.8" />
       <module name="service-product" target="1.8" />
       <module name="service-search" target="1.8" />
       <module name="service-user" target="1.8" />
@@ -55,6 +57,7 @@
       <module name="service-cart" options="-parameters" />
       <module name="service-item" options="-parameters" />
       <module name="service-order" options="-parameters" />
+      <module name="service-pay" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-search" options="-parameters" />
       <module name="service-user" options="-parameters" />

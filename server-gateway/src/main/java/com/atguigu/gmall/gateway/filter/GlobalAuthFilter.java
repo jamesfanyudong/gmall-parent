@@ -14,6 +14,7 @@ import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpCookie;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
@@ -192,6 +193,23 @@ public class GlobalAuthFilter implements GlobalFilter {
         //1、给浏览器响应一个状态码 302。 响应头命令浏览器跳转一个位置  Location:  xjkjsalj
         // (2xx  3xx)失败  (4xx[客户端失败] 5xx[服务器完蛋])失败
         response.setStatusCode(HttpStatus.FOUND);
+
+        ResponseCookie cookie = ResponseCookie.from("token", "xxxx")
+                .maxAge(0)
+                // 作用范围
+                .domain(".gmall.com")
+                .path("/")
+                .build();
+        // 放到请求头中
+        response.addCookie(cookie);
+        ResponseCookie infoCookie = ResponseCookie.from("userInfo", "sss")
+                .maxAge(0)
+                .domain(".gmall.com")
+                .path("/")
+                .build();
+        response.addCookie(infoCookie);
+
+
         response.getHeaders().set("Location",loginPage);
         return response.setComplete();
     }

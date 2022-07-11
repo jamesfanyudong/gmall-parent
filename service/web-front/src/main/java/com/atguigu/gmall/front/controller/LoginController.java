@@ -14,9 +14,9 @@ public class LoginController {
 
     @GetMapping("/login.html")
     public String login(@RequestParam(value = "originUrl",defaultValue = "ttp://www.gmall.com")
-                        String originaUrl, Model model){
+                        String originUrl, Model model){
 
-        model.addAttribute("originUrl",originaUrl);
+        model.addAttribute("originUrl",originUrl);
 
         return "login";
     }

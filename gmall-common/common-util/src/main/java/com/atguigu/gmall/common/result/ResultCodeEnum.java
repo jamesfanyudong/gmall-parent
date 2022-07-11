@@ -32,7 +32,11 @@ public enum ResultCodeEnum {
     SECKILL_ORDER_SUCCESS(218, "下单成功"),
     COUPON_GET(220, "优惠券已经领取"),
     COUPON_LIMIT_GET(221, "优惠券已发放完毕"),
-    OUT_OF_CART(30001,"购物车已满")
+    OUT_OF_CART(30001,"购物车已满"),
+    ORRDER_INVALIDE_TOKEN(3000002,"令牌是假的"),
+    ORDER_ITEM_NO_STOCK(300003,"没有库存了"),
+    ORDER_PRICE_CHANGE(3000023,"价格改变了：")
+
     ;
 
 
