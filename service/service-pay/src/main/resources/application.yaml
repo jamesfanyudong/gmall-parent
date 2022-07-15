@@ -1,0 +1,40 @@
+server:
+  port: 15000
+spring:
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+  main:
+    allow-bean-definition-overriding: true
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  rabbitmq:
+    host: 192.168.200.128
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    publisher-confirm-type: correlated   #发送端确认的方式：关联方式，错误的消息，必须通知publisher
+    publisher-returns: true   #发送返回true，服务器只要收到消息了就通知发送方。
+    listener:
+      type: simple
+      simple:
+        acknowledge-mode: manual  #手动确认
+
+
+app:
+  threadpool:
+    core-pool-size: 4
+    maximum-pool-size: 8
+    work-queue-size: 200
+    keep-alive-time: 60
+  alipay:
+    app-id: 2021000121621578
+    merchant-private-key: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCFURjzQZGp03QVPFNEKoQPSPSl31FnyPj4V1Q7qMZbWZHvsMOwr583gOybx6vWjTWqvtR7pGO47J8WOjodKrNv3X3pxWYgrMkE6m0r1zOvlp0wIPwA1TuMiWbcQnAeUnFkW4hMVjlBTYdf2TZ/7RCpJ6zu3vPquNY4WaC2PKJFey8KhkST2DwySx9gJlMseuMM+QttRW7pOZ0MK4Iirto8UgI8FkLlTMWjW/tDBxZmZQMHndG8khzxmdY4C2JbzdIFDiWOU8P9D6q61BMrFNjPZ9fPd+HAyFC9KSiEI9PlFmEXWOT0UNSLNYHiGhLSosXfqJduLBZVp8UKqNgzSx+xAgMBAAECggEAQxtgYMpnpUGwVCQqkcyI7xy9MWWpF4H9eRyUZPd+6Wq74BhtWNn+XjUCZSPsJrKsCgfG83n7TJGnPswOhrIA4tVuVSctUlNHWLccPw4zkTZSZ3CjCVRMhmB/q22x/EFpnKfKgwqABZQeCaxQF7LgSRWUoiUOSN/DzVeoYzNAR5KO+7TvTzpYfn8p87aAkuNCZqGOUqtj6RrYZDiu3nX9YeMEwIgu3pIAZWJ26LHvOabT/Dy88SB9g6DOi2nnwYU+TQqiK9vxGlgrdusv8oTnuHwnvVgCTO49m/jMriQst6fQ4xd+U5ESPqnNTL8mWZ/XV8/jXFJo0T418sdHYJ9+QQKBgQDYUbAZAdntmwWTCLhLTmROk+FZpqaUxwWcRY+yq6ZDUS+yEpQ20Wd5ciND2Fe7hxyXaIf9XU36BLHXrkaI8Nh2DGjoWamJi9+fm0UWzDHDc4niBBPJ5GWs/3novNw+WHDpmz0ds1c7GBAKOeCQ6T5B/FIH0zDkTZEyGygS2P97iQKBgQCdxaI9MzqdBirDsB3/ecwSiacwHgiAj90nuzdUxJb3aMiR1QYLX5rW0RryOtJOrydpVuUGR16IEgk+yGfNukpjhQr3JKWoaMAQ14IU6xdOthB6H+qoPTpaODLnKmS/epeSY9brTptEsgLVhw3hC5cWoqnDmsgAJOq+OsZa5kow6QKBgDZke/IdzA154HHzTFvrLz+u4YgoZlScoqWDvDlB/gGJRYPyNgB+sRURhRqHKLBHrgHIUAF+V6AZVBqWgLfoT5WHU02xVfb3C9jXMw0jdRPfVnlVayBl5McWSjIiYwLuPB4RYdG5CaMbTtUzbmshqvzulDXRfca6VlsSBwaON9d5AoGAUms4AbiNWhIqrOeIBDngPZ7jU+OclWySH3tRwFqicsSuYmBiM/bRsH60EO5hhvFBKWpXYhxOac7iPYX7lCFJUwvhWpIuZ/ewvhuWvM7C8j9yBBpAP3sczJynGtOupcio/bRiRbJeslg72sgem/2uBAkdni1xZYHjj1Ss4jeDcmECgYEAoauefLAMy1lPGBphQ0A8AvkzC+n9reioqy0dcOM4XloOxswPqCkHbHmuaZBm91tSIAUIk2FpYw4T0ufIDgXuTt58x/iltBsONW6sdBEmnzTMqP+CraajADfmcjuUucj1gv/b1g3oX2IxMU42xws4JlklM+UUYWa8F+usGHLUv5w=
+    alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAifAEqV6pHKrnTiKU6YGVRA18JKRAkibYnwvlrpJif2zRW8G1mhoXpckFi+764iwQIWlZs7nGIEZ4fZyMuBFO4iIVulhCoppiDEb8JlFLUWndTuUcMdBucJiufvRjhLjeG5+PAZa4HaygY+zti/N2sQupcgV2ZCCsvMGrfLJfZk+czsNPUoDToexdlI2A0hRrRLm3ThQQB4P7HN0fVue6fW2JzLgMUMhWN0ZcsiDc8h7hPCXOv/fxM0wlO04hKUsqNMHAiQOaWW2zcgDPU5khBtz43ZtYozRVtrvDXqDvPKNSTeu+EbtjDkE8ME7KU7plQSL7UDFqhETNmc0h9su6cwIDAQAB
+    notify-url: http://59ab8fa9.cpolar.cn/rpcapi/payment/notify/success   #内网穿透  aaa.cccc.bbb/payment/notify
+    return-url: http://payment.gmall.com/api/payment/alipay/success
+    sign-type: RSA2
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do

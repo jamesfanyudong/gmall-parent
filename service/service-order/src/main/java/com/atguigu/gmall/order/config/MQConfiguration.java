@@ -100,4 +100,27 @@ public class MQConfiguration {
                 null
         );
     }
+
+    /**
+     * 支付成功单队列
+     */
+
+    @Bean
+    public Queue orderPayedQueue(){
+        return new Queue(
+                MQConst.QUEUE_ORDER_PAYED,true,false,false);
+
+    }
+    @Bean
+    public Binding orderPayedQueueBinging(){
+        return new Binding(
+                MQConst.QUEUE_ORDER_PAYED,
+                Binding.DestinationType.QUEUE,
+                MQConst.EXCHANGE_ORDER_EVENT,
+                MQConst.ROUTE_KEY_ORDER_PAYED,
+                null
+        );
+    }
+
+
 }

@@ -1,5 +1,4 @@
 package com.atguigu.gmall.order.service.impl;
-
 import com.atguigu.gmall.cart.CartFeignClient;
 import com.atguigu.gmall.common.constant.MQConst;
 import com.atguigu.gmall.common.constant.RedisConst;
@@ -11,18 +10,26 @@ import com.atguigu.gmall.common.util.Jsons;
 import com.atguigu.gmall.model.cart.CartInfo;
 import com.atguigu.gmall.model.enums.OrderStatus;
 import com.atguigu.gmall.model.enums.ProcessStatus;
+import com.atguigu.gmall.model.order.OrderDetail;
 import com.atguigu.gmall.model.order.OrderInfo;
 import com.atguigu.gmall.model.order.OrderStatusLog;
 import com.atguigu.gmall.model.to.mq.OrderCreateMsg;
+import com.atguigu.gmall.model.to.mq.WareStockDetail;
 import com.atguigu.gmall.model.vo.order.CartOrderDetailVo;
 import com.atguigu.gmall.model.vo.order.OrderConfirmVo;
 import com.atguigu.gmall.model.vo.order.OrderSubmitVo;
+import com.atguigu.gmall.model.vo.ware.OrderSplitRespVo;
+import com.atguigu.gmall.model.vo.ware.OrderSplitVo;
+import com.atguigu.gmall.model.vo.ware.WareFenBuVo;
 import com.atguigu.gmall.order.service.OrderBizService;
+import com.atguigu.gmall.order.service.OrderDetailService;
 import com.atguigu.gmall.order.service.OrderInfoService;
 import com.atguigu.gmall.order.service.OrderStatusLogService;
 import com.atguigu.gmall.product.SkuFeignClient;
 import com.atguigu.gmall.user.UserFeignClient;
 import com.atguigu.gmall.ware.WareFeignClient;
+import com.fasterxml.jackson.core.type.TypeReference;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -33,10 +40,7 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -46,6 +50,7 @@ import java.util.stream.Collectors;
  * @author fanyudong
  * @date 2022/7/8 19:06
  */
+@Slf4j
 @Service
 public class OrderBizServiceImpl implements OrderBizService {
 
@@ -75,6 +80,8 @@ public class OrderBizServiceImpl implements OrderBizService {
 
     @Autowired
     RabbitTemplate rabbitTemplate;
+    @Autowired
+    OrderDetailService orderDetailService;
 
 
     @Override
@@ -388,6 +395,166 @@ public class OrderBizServiceImpl implements OrderBizService {
                 closedStatus.name(),
                 ProcessStatus.UNPAID.name());
 
+    }
+
+    /**
+     * 库存系统在扣库存期间如果发现订单商品在不同仓库，需要拆单
+     * 就会远程调用订单服务，进行拆单。
+     * @param vo
+     * @return
+     */
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public List<OrderSplitRespVo> splitOrder(OrderSplitVo vo) {
+
+        List<OrderSplitRespVo> result = new ArrayList<>();
+
+        //1、查询当前父订单以及详情
+       OrderInfo orderInfo =  orderInfoService.getOrderInfoAndDetails(Long.parseLong(vo.getOrderId()),
+                Long.parseLong(vo.getUserId()));
+       if (orderInfo == null){
+           log.info("订单:orderinfo {}为空",orderInfo);
+           return null;
+       }
+
+
+
+
+
+
+
+        //2、按照库存分布拆分出新单
+        String wareSkuMap = vo.getWareSkuMap();
+        //3、得到库存分布信息
+        List<WareFenBuVo> wareFenBuVos = Jsons.toObj(wareSkuMap, new TypeReference<List<WareFenBuVo>>() {
+        });
+
+
+        //4、按照仓库拆单
+        for (WareFenBuVo fenBuVo : wareFenBuVos) {
+            //保存子订单
+            OrderSplitRespVo order = saveChildOrder(orderInfo,fenBuVo);
+            result.add(order);
+
+        }
+
+
+        //5、父单改为已拆分状态
+        ProcessStatus split = ProcessStatus.SPLIT;
+        orderInfoService.updateOrderStatus(orderInfo.getId(),
+                orderInfo.getUserId(),
+                split.getOrderStatus().name(),
+                split.name(),
+                ProcessStatus.PAID.name());
+
+
+        return result;
+
+    }
+
+    /**
+     * 保存子订单
+     * @param orderInfo
+     * @param fenBuVo
+     * @return
+     */
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public OrderSplitRespVo saveChildOrder(OrderInfo orderInfo, WareFenBuVo fenBuVo) {
+        //1、准备子订单
+        OrderInfo childOrder = prepareChildOrder(orderInfo,fenBuVo);
+
+
+        //2、保存子订单 order_info
+        orderInfoService.save(childOrder);
+
+
+        //3、保存子订单详情
+        List<OrderDetail> detailList = childOrder.getOrderDetailList().stream().map(item ->
+        {
+            item.setOrderId(childOrder.getId());
+            return item;
+        }).collect(Collectors.toList());
+        orderDetailService.saveBatch(detailList);
+
+
+
+        //4、准备返回
+        return prepareOrderSplitRespVo(childOrder);
+    }
+
+    private OrderSplitRespVo prepareOrderSplitRespVo(OrderInfo childOrder) {
+        OrderSplitRespVo respVo = new OrderSplitRespVo();
+        respVo.setOrderId(childOrder.getId()+"");
+        respVo.setConsignee(childOrder.getConsignee());
+        respVo.setConsigneeTel(childOrder.getConsigneeTel());
+        respVo.setOrderComment(childOrder.getOrderComment());
+        respVo.setOrderBody(childOrder.getTradeBody());
+        respVo.setDeliveryAddress(childOrder.getDeliveryAddress());
+        respVo.setPaymentWay("2");
+        respVo.setWareId(childOrder.getWareId());
+        //子单负责的所有商品详情
+        List<WareStockDetail> details = childOrder.getOrderDetailList().stream()
+                .map(item -> new WareStockDetail(item.getSkuId(), item.getSkuNum(), item.getSkuName()))
+                .collect(Collectors.toList());
+        respVo.setDetails(details);
+        return respVo;
+    }
+
+    private OrderInfo prepareChildOrder(OrderInfo orderInfo, WareFenBuVo fenBuVo) {
+        OrderInfo childOrder = new OrderInfo();
+        //设置订单详情；
+        Set<String> skuIds = fenBuVo.getSkuIds().stream().collect(Collectors.toSet());
+        //获取总单中子订单负责的商品
+        List<OrderDetail> orderDetails = orderInfo.getOrderDetailList().stream()
+                .filter(item -> skuIds.contains(item.getSkuId().toString()))
+                .collect(Collectors.toList());
+
+        //得到当前子订单负责的商品
+        childOrder.setOrderDetailList(orderDetails);
+        childOrder.setConsignee(orderInfo.getConsignee());
+        childOrder.setConsigneeTel(orderInfo.getConsigneeTel());
+
+
+        //拆单后包含的商品的总额
+        BigDecimal total = orderDetails.stream()
+                .map(item -> item.getOrderPrice().multiply(new BigDecimal(item.getSkuNum())))
+                .reduce(BigDecimal::add)
+                .get();
+        childOrder.setTotalAmount(total);
+
+        //每个子单自己购买的商品的名字
+       childOrder.setTradeBody(orderDetails.get(0).getSkuName());
+        //每个子单自己购买的商品的图片
+        childOrder.setImgUrl(orderDetails.get(0).getImgUrl());
+        //子单拆分的时间
+        childOrder.setCreateTime(new Date());
+        //子单涉及到的商品原始总额
+        childOrder.setOriginalTotalAmount(new BigDecimal("0"));
+        //子单每个商品自己的优惠额
+        childOrder.setActivityReduceAmount(new BigDecimal("0"));
+        childOrder.setCouponAmount(new BigDecimal("0"));
+        //每个子单最终配送以后会有自己的物流号
+        childOrder.setTrackingNo("");
+
+        childOrder.setOperateTime(new Date());
+
+        childOrder.setOrderStatus(orderInfo.getOrderStatus());
+        childOrder.setUserId(orderInfo.getUserId());
+        childOrder.setPaymentWay(orderInfo.getPaymentWay());
+        childOrder.setDeliveryAddress(orderInfo.getDeliveryAddress());
+        childOrder.setOrderComment(orderInfo.getOrderComment());
+        childOrder.setOutTradeNo(orderInfo.getOutTradeNo());
+        childOrder.setExpireTime(orderInfo.getExpireTime());
+        childOrder.setProcessStatus(orderInfo.getProcessStatus());
+        childOrder.setParentOrderId(orderInfo.getParentOrderId());
+        childOrder.setWareId(fenBuVo.getWareId());
+        childOrder.setRefundableTime(orderInfo.getRefundableTime());
+        childOrder.setFeightFee(new BigDecimal("0"));
+
+
+
+        return childOrder;
     }
 
 

@@ -33,8 +33,15 @@ public class PayController {
         //订单列表页
         return "redirect:/myOrder.html";
 
-
-
-
     }
+    @GetMapping("/payment/success.html")
+    public String paySuccessPage(){
+        //永远不要再这里拿到订单信息，修改为已支付;
+
+        //1、浏览器故障没跳过来？（用户关了浏览器）
+        //2、非法直接请求这个页面（如果忘记验证签名）。出现安全问题
+        return "payment/success";
+    }
+
+
 }

@@ -26,6 +26,7 @@ public class OrderCloseListener {
 
     //MQ能极大程度保证业务一致性
     //幂等性问题: 怎么解决？ 业务自己保证=(关单期望状态+影响行数日志)；
+
     @RabbitListener(queues = MQConst.QUEUE_ORDER_DEAD)
     void closeListener(Message message, Channel channel) throws IOException {
 
@@ -40,7 +41,7 @@ public class OrderCloseListener {
             orderBizSercice.closeOrder(msg.getOrderId(),msg.getUserId());
             channel.basicAck(properties.getDeliveryTag(),false);
         } catch (Exception e) {
-            log.error("MQ业务处理失败：{}",e);
+            log.error("MQ业务处理失败：{} ",e);
            channel.basicNack(properties.getDeliveryTag(),false,true);
         }
 

@@ -4,78 +4,135 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfcd86c9-9ab9-4c8b-8270-063f638d145a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/constant/MQConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/constant/MQConst.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/to/mq/OrderCreateMsg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/order/OrderSubmitDetailVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/order/OrderSubmitVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/to/mq/OrderCreateMsg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/order/OrderSubmitDetailVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/order/OrderSubmitVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/config/MQConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/controller/OrderRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/listener/OrderCloseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderBizService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/src/test/java/com/atguigu/gmall/order/test/MQTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/config/MQConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/controller/OrderRestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderCloseListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/rpc/OrderRpcController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderBizService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/MQTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-pay/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/service-pay/service-pay.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/PayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/PayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="cfcd86c9-9ab9-4c8b-8270-063f638d145a" name="Default Changelist" comment="订单消息队列">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_78.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_4_31_48_ALL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_62.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/to/mq/PayBizExtendParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/to/mq/WareStockDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/to/mq/WareStockMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/ware/OrderDeduceStatusVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/ware/OrderSplitRespVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/ware/OrderSplitVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/ware/WareFenBuVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/META-INF/model.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/to/mq/PayBizExtendParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/to/mq/WareStockDetail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/to/mq/WareStockMsg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/ware/OrderDeduceStatusVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/ware/OrderSplitRespVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/ware/OrderSplitVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/ware/WareFenBuVo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/controller/OrderSplitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/listener/OrderPayedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/listener/OrderWareStockListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/src/test/java/com/atguigu/gmall/order/test/ObserverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/controller/OrderSplitController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderPayedListener$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderPayedListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderWareStockListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/MessagePublisher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/ObserverTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/PersonSubscriber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/PayMainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/config/mq/MQConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/config/pay/AlipayAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/config/pay/AlipayProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/controller/AliPayRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/controller/AlipaySuccessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/notify/AlipayNotifyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/service/PayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/java/com/atguigu/gmall/pay/service/impl/PayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/PayMainApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/config/mq/MQConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/config/pay/AlipayAutoConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/config/pay/AlipayProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/controller/AliPayRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/controller/AlipaySuccessController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/notify/AlipayNotifyController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/service/PayService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-pay/target/classes/com/atguigu/gmall/pay/service/impl/PayServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/service-product/target/classes/META-INF/service-product.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/config/MqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/config/MqConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/constant/RedisConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/constant/RedisConst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/result/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/result/ResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/constant/RedisConst.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/constant/RedisConst.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/result/ResultCodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/result/ResultCodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/mall-feign-util/src/main/java/com/atguigu/gmall/order/OrderFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/mall-feign-util/src/main/java/com/atguigu/gmall/order/OrderFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/mall-feign-util/target/classes/com/atguigu/gmall/order/OrderFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/mall-feign-util/target/classes/com/atguigu/gmall/order/OrderFeignClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common/service-util/src/main/java/com/atguigu/gmall/common/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/service-util/src/main/java/com/atguigu/gmall/common/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/constant/MQConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/src/main/java/com/atguigu/gmall/common/constant/MQConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/constant/MQConst.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/common-util/target/classes/com/atguigu/gmall/common/constant/MQConst.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-common/service-util/target/classes/com/atguigu/gmall/common/config/MybatisPlusConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/service-util/target/classes/com/atguigu/gmall/common/config/MybatisPlusConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/order/CartOrderDetailVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/vo/order/CartOrderDetailVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/order/CartOrderDetailVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/vo/order/CartOrderDetailVo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-gateway/src/main/java/com/atguigu/gmall/gateway/filter/GlobalAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/src/main/java/com/atguigu/gmall/gateway/filter/GlobalAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/enums/ProcessStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/enums/ProcessStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/order/OrderDetailVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/atguigu/gmall/model/order/OrderDetailVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/ProcessStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/enums/ProcessStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderDetailVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/target/classes/com/atguigu/gmall/model/order/OrderDetailVo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-gateway/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-gateway/target/classes/com/atguigu/gmall/gateway/filter/GlobalAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/server-gateway/target/classes/com/atguigu/gmall/gateway/filter/GlobalAuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/service-order.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/service-order.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/OrderMainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/OrderMainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/controller/OrderRpcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/rpc/OrderRpcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/config/MQConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/config/MQConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/listener/OrderCloseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/listener/OrderCloseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/mapper/OrderDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/mapper/OrderDetailMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/mapper/OrderInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/mapper/OrderInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderBizSercice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderBizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderBizService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/OrderInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizSerciceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/PaymentInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/PaymentInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderDetailServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/PaymentInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/PaymentInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/resources/application-sharding.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/resources/application-sharding.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/main/resources/mapper/OrderDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/resources/mapper/OrderDetailMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/src/main/resources/mapper/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/main/resources/mapper/OrderInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/src/test/java/com/atguigu/gmall/order/test/TestOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/test/java/com/atguigu/gmall/order/test/TestOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/src/test/java/com/atguigu/gmall/order/test/MQTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/src/test/java/com/atguigu/gmall/order/test/MQTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/application-sharding.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/application-sharding.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/OrderMainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/OrderMainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/controller/OrderRpcController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/config/MQConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/config/MQConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderCloseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/listener/OrderCloseListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/mapper/OrderDetailMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/mapper/OrderDetailMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/mapper/OrderInfoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/mapper/OrderInfoMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderBizSercice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderBizService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderBizService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderDetailService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/OrderInfoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderBizSerciceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/PaymentInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/PaymentInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderDetailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderDetailServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/OrderInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/PaymentInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/com/atguigu/gmall/order/service/impl/PaymentInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/mapper/OrderDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/mapper/OrderDetailMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service-order/target/classes/mapper/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/classes/mapper/OrderInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/TestOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/TestOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/ProductMainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/ProductMainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/java/com/atguigu/gmall/product/config/MybatisPlusConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service-user/target/classes/com/atguigu/gmall/user/UserMainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-user/target/classes/com/atguigu/gmall/user/UserMainApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/MQTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-order/target/test-classes/com/atguigu/gmall/order/test/MQTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-pay/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-pay/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-pay/service-pay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-pay/service-pay.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/ProductMainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/ProductMainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/service-product/target/classes/com/atguigu/gmall/product/config/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/src/main/java/com/atguigu/gmall/front/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/web-front/src/main/resources/templates/payment/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/src/main/resources/templates/payment/pay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/target/classes/com/atguigu/gmall/front/controller/PayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/web-front/target/classes/templates/payment/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/service/web-front/target/classes/templates/payment/pay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/bean/WareOrderTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/bean/WareOrderTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/mq/WareConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/mq/WareConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/service/impl/GwareServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/service/impl/GwareServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/util/HttpclientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/util/HttpclientUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/bean/WareOrderTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/bean/WareOrderTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/mq/WareConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/mq/WareConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/service/impl/GwareServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ware-manage/target/classes/com/atguigu/gmall/ware/service/impl/GwareServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +182,9 @@
       </path>
     </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gmall-parent" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -196,13 +256,13 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="H:/1_java高级/在线教育项目/day15/代码/online_edu_parent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/service-pay/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -215,11 +275,14 @@
       <recent name="com.atguigu.gmall.item.cache" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.atguigu.gmall.order.listener" />
+      <recent name="com.atguigu.gmall.pay.config.mq" />
       <recent name="com.atguigu.gmall.common.annotation" />
       <recent name="com.atguigu.gmall.common.cache.aspect" />
       <recent name="com.atguigu.gmall.model.vo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\mall0106\gmall-parent\service\service-pay\src\main\resources" />
       <recent name="I:\mall0106\gmall-parent\service\service-order\src\main\resources" />
       <recent name="I:\mall0106\gmall-parent\service\service-cart\src\main\resources" />
       <recent name="I:\mall0106\gmall-parent\service\service-user\src\main\resources" />
@@ -233,7 +296,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Compound.mall">
+  <component name="RunManager" selected="Spring Boot.ServiceWareApplication">
     <configuration name="SearchController" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.front.controller.SearchController" />
       <module name="web-front" />
@@ -247,29 +310,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.gateway.Test1" />
-      <module name="server-gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.gateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.order.test.TestOrder" />
-      <module name="service-order" />
+    <configuration default="true" type="Application" factoryName="Application">
       <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.order.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,69 +322,17 @@
       <method v="2" />
     </configuration>
     <configuration name="mall" type="CompoundRunConfigurationType">
+      <toRun name="ProductMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="PayMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="WebFrontMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="ItemMainApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="OrderMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="UserMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="GatewayMainApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ItemMainApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="WebFrontMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="SearchMainApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="OrderMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="ServiceWareApplication" type="SpringBootApplicationConfigurationType" />
-      <toRun name="ProductMainApplication" type="SpringBootApplicationConfigurationType" />
       <toRun name="CartMainApplication" type="SpringBootApplicationConfigurationType" />
       <method v="2" />
-    </configuration>
-    <configuration name="MQTest.testSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-order" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.order.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.gmall.order.test" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.order.test.MQTest" />
-      <option name="METHOD_NAME" value="testSend" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestOrder.testSaveDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-order" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.order.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.gmall.order.test" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.order.test.TestOrder" />
-      <option name="METHOD_NAME" value="testSaveDetail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestOrder.testSaveInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-order" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.order.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.atguigu.gmall.order.test" />
-      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.order.test.TestOrder" />
-      <option name="METHOD_NAME" value="testSaveInfo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <shortenClasspath name="MANIFEST" />
@@ -363,8 +353,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.cart.CartMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -378,8 +366,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.gateway.GatewayMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -393,8 +379,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.item.ItemMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -408,9 +392,21 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.order.OrderMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms300m -Xmx300m" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PayMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="service-pay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.pay.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.pay.PayMainApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -419,12 +415,11 @@
       <module name="service-product" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.atguigu.gmall.item.*" />
+          <option name="PATTERN" value="com.atguigu.gmall.product.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.product.ProductMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms200m -Xmx200m" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <method v="2">
@@ -440,19 +435,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.search.SearchMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceWareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ServiceWareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ware-manage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.ware.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.ware.ServiceWareApplication" />
-      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -472,46 +467,37 @@
     </configuration>
     <configuration name="WebFrontMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="web-front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.front.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.gmall.front.WebFrontMainApplication" />
-      <option name="VM_PARAMETERS" value="-Xms100m -Xmx100m" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.SearchController" />
-      <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.TestOrder" />
       <item itemvalue="Compound.mall" />
-      <item itemvalue="JUnit.TestOrder.testSaveInfo" />
-      <item itemvalue="JUnit.TestOrder.testSaveDetail" />
       <item itemvalue="Spring Boot.OrderMainApplication" />
-      <item itemvalue="Spring Boot.ServiceWareApplication" />
-      <item itemvalue="Spring Boot.CartMainApplication" />
-      <item itemvalue="Spring Boot.SearchMainApplication" />
-      <item itemvalue="Spring Boot.UserMainApplication" />
-      <item itemvalue="Spring Boot.ItemMainApplication" />
-      <item itemvalue="Spring Boot.GatewayMainApplication" />
+      <item itemvalue="Spring Boot.PayMainApplication" />
       <item itemvalue="Spring Boot.ProductMainApplication" />
+      <item itemvalue="Spring Boot.UserMainApplication" />
       <item itemvalue="Spring Boot.WebFrontMainApplication" />
-      <item itemvalue="JUnit.MQTest.testSend" />
+      <item itemvalue="Spring Boot.GatewayMainApplication" />
+      <item itemvalue="Spring Boot.CartMainApplication" />
+      <item itemvalue="Spring Boot.ItemMainApplication" />
+      <item itemvalue="Spring Boot.SearchMainApplication" />
+      <item itemvalue="Spring Boot.ServiceWareApplication" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MQTest.testSend" />
-        <item itemvalue="Application.TestOrder" />
-        <item itemvalue="JUnit.TestOrder.testSaveDetail" />
-        <item itemvalue="JUnit.TestOrder.testSaveInfo" />
-        <item itemvalue="Application.Test1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.24796447" />
+          <option name="contentProportion" value="0.26275116" />
           <treeState>
             <expand>
               <path>
@@ -590,7 +576,14 @@
       <workItem from="1657413822006" duration="2261000" />
       <workItem from="1657416096422" duration="13906000" />
       <workItem from="1657505768573" duration="3471000" />
-      <workItem from="1657532728672" duration="11185000" />
+      <workItem from="1657532728672" duration="12526000" />
+      <workItem from="1657585703954" duration="2034000" />
+      <workItem from="1657619013555" duration="11164000" />
+      <workItem from="1657675725169" duration="3576000" />
+      <workItem from="1657704732002" duration="9099000" />
+      <workItem from="1657714064041" duration="2515000" />
+      <workItem from="1657758837991" duration="24442000" />
+      <workItem from="1657846651224" duration="11534000" />
     </task>
     <task id="LOCAL-00001" summary="c初始化">
       <created>1655713667806</created>
@@ -683,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657285723766</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="订单消息队列">
+      <created>1657544534691</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657544534691</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,9 +721,14 @@
     <MESSAGE value="es检索" />
     <MESSAGE value="购物车" />
     <MESSAGE value="订单详情+库存系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单详情+库存系统" />
+    <MESSAGE value="订单消息队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单消息队列" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="463" y="64" key="#&lt;template&gt;_of_Application" timestamp="1657759841992">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="463" y="64" key="#&lt;template&gt;_of_Application/0.0.1440.860@0.0.1440.860" timestamp="1657759841992" />
     <state x="343" y="91" key="#&lt;template&gt;_of_JUnit" timestamp="1657275326986">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -748,22 +753,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="243" y="0" width="744" height="860" key="#ItemMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1657175029909" />
-    <state x="277" y="81" key="#Notifications" timestamp="1655715012364">
+    <state x="277" y="81" key="#Notifications" timestamp="1657715191512">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="277" y="81" key="#Notifications/0.0.1440.860@0.0.1440.860" timestamp="1655715012364" />
-    <state x="402" y="0" width="744" height="860" key="#OrderMainApplication" timestamp="1657351085801">
+    <state x="277" y="81" key="#Notifications/0.0.1440.860@0.0.1440.860" timestamp="1657715191512" />
+    <state x="402" y="0" width="744" height="860" key="#OrderMainApplication" timestamp="1657715210778">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="402" y="0" width="744" height="860" key="#OrderMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1657351085801" />
-    <state x="0" y="0" width="744" height="860" key="#ProductMainApplication" timestamp="1656924592635">
+    <state x="402" y="0" width="744" height="860" key="#OrderMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1657715210778" />
+    <state x="331" y="0" width="744" height="860" key="#ProductMainApplication" timestamp="1657715237500">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="0" y="0" width="744" height="860" key="#ProductMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1656924592635" />
-    <state x="300" y="182" key="#Project_Structure" timestamp="1657283952814">
+    <state x="331" y="0" width="744" height="860" key="#ProductMainApplication/0.0.1440.860@0.0.1440.860" timestamp="1657715237500" />
+    <state x="300" y="182" key="#Project_Structure" timestamp="1657585816878">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="300" y="182" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1657283952814" />
+    <state x="300" y="182" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1657585816878" />
     <state x="567" y="0" width="744" height="860" key="#SearchMainApplication" timestamp="1657097715624">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -788,18 +793,18 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="604" y="343" key="#com.intellij.debugger.ui.breakpoints.BreakpointsConfigurationDialogFactory.BreakpointsConfigurationDialog.AddFieldBreakpointDialog/0.0.1440.860@0.0.1440.860" timestamp="1657181950381" />
-    <state x="114" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1657344055362">
+    <state x="197" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1657765882589">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="114" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1657344055362" />
+    <state x="197" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1657765882589" />
     <state x="411" y="251" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1655885229422">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="411" y="251" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1655885229422" />
-    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1657538371727">
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser" timestamp="1657765325235">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1657538371727" />
+    <state x="513" y="251" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1657765325235" />
     <state x="547" y="240" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1656150472462" />
     <state x="196" y="257" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1657278351060">
       <screen x="0" y="0" width="1440" height="860" />
@@ -831,101 +836,101 @@
     </state>
     <state x="236" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.860@0.0.1440.860" timestamp="1657537135575" />
     <state x="892" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1656151365931" />
-    <state x="386" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657539501054">
+    <state x="386" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657856112654">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="386" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1657539501054" />
-    <state x="61" y="274" width="415" height="586" key="#xdebugger.evaluate" timestamp="1657181612352">
+    <state x="386" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1657856112654" />
+    <state x="-65" y="274" width="617" height="586" key="#xdebugger.evaluate" timestamp="1657860868492">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="61" y="274" width="415" height="586" key="#xdebugger.evaluate/0.0.1440.860@0.0.1440.860" timestamp="1657181612352" />
+    <state x="-65" y="274" width="617" height="586" key="#xdebugger.evaluate/0.0.1440.860@0.0.1440.860" timestamp="1657860868492" />
     <state x="353" y="314" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1656486525196">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="353" y="314" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.860@0.0.1440.860" timestamp="1656486525196" />
     <state x="376" y="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1656143828146" />
-    <state x="124" y="51" key="CommitChangelistDialog2" timestamp="1657285719277">
+    <state x="124" y="51" key="CommitChangelistDialog2" timestamp="1657623877506">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="124" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1657285719277" />
+    <state x="124" y="51" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1657623877506" />
     <state x="132" y="23" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1656846559893" />
-    <state width="429" height="466" key="DebuggerActiveHint" timestamp="1657011730486">
+    <state width="432" height="466" key="DebuggerActiveHint" timestamp="1657858111190">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="429" height="466" key="DebuggerActiveHint/0.0.1440.860@0.0.1440.860" timestamp="1657011730486" />
-    <state x="579" y="238" key="FileChooserDialogImpl" timestamp="1657522532143">
+    <state width="432" height="466" key="DebuggerActiveHint/0.0.1440.860@0.0.1440.860" timestamp="1657858111190" />
+    <state x="579" y="238" key="FileChooserDialogImpl" timestamp="1657619434544">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="579" y="238" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1657522532143" />
+    <state x="579" y="238" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1657619434544" />
     <state x="618" y="228" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1656755532727" />
-    <state x="567" y="419" width="373" height="207" key="Github.CreateGistDialog" timestamp="1657428899081">
+    <state x="567" y="419" width="373" height="207" key="Github.CreateGistDialog" timestamp="1657768401720">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="567" y="419" width="373" height="207" key="Github.CreateGistDialog/0.0.1440.860@0.0.1440.860" timestamp="1657428899081" />
-    <state width="885" height="154" key="GridCell.Tab.0.bottom" timestamp="1657543928160">
+    <state x="567" y="419" width="373" height="207" key="Github.CreateGistDialog/0.0.1440.860@0.0.1440.860" timestamp="1657768401720" />
+    <state width="1008" height="221" key="GridCell.Tab.0.bottom" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656152105246" />
-    <state width="885" height="154" key="GridCell.Tab.0.center" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.0.center" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1656152105246" />
-    <state width="885" height="154" key="GridCell.Tab.0.left" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.0.left" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1656152105246" />
-    <state width="885" height="154" key="GridCell.Tab.0.right" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.0.right" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1656152105246" />
-    <state width="885" height="154" key="GridCell.Tab.1.bottom" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.1.bottom" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656152105247" />
-    <state width="885" height="154" key="GridCell.Tab.1.center" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.1.center" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1656152105247" />
-    <state width="885" height="154" key="GridCell.Tab.1.left" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.1.left" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1656152105246" />
-    <state width="885" height="154" key="GridCell.Tab.1.right" timestamp="1657543928160">
+    <state width="1008" height="221" key="GridCell.Tab.1.right" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="885" height="154" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1657543928160" />
+    <state width="1008" height="221" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="943" height="326" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1656152105247" />
-    <state width="1180" height="113" key="GridCell.Tab.2.bottom" timestamp="1657435949129">
+    <state width="1008" height="221" key="GridCell.Tab.2.bottom" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1180" height="113" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1657435949129" />
-    <state width="1180" height="113" key="GridCell.Tab.2.center" timestamp="1657435949129">
+    <state width="1008" height="221" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
+    <state width="1008" height="221" key="GridCell.Tab.2.center" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1180" height="113" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1657435949129" />
-    <state width="1180" height="113" key="GridCell.Tab.2.left" timestamp="1657435949129">
+    <state width="1008" height="221" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
+    <state width="1008" height="221" key="GridCell.Tab.2.left" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1180" height="113" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1657435949129" />
-    <state width="1180" height="113" key="GridCell.Tab.2.right" timestamp="1657435949129">
+    <state width="1008" height="221" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
+    <state width="1008" height="221" key="GridCell.Tab.2.right" timestamp="1657861291827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1180" height="113" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1657435949129" />
+    <state width="1008" height="221" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1657861291827" />
     <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1657021689587">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1440.860@0.0.1440.860" timestamp="1657021689587" />
-    <state x="269" y="99" key="SettingsEditor" timestamp="1657527119725">
+    <state x="269" y="99" key="SettingsEditor" timestamp="1657713964178">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="269" y="99" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1657527119725" />
+    <state x="269" y="99" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1657713964178" />
     <state x="133" y="59" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1656755534885" />
     <state x="702" y="421" key="VCS.ChangelistChooser" timestamp="1657178778926">
       <screen x="0" y="0" width="1440" height="860" />
@@ -935,15 +940,15 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="618" y="358" key="VCS.EditChangelistDialog/0.0.1440.860@0.0.1440.860" timestamp="1655869622997" />
-    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1657285731039">
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2" timestamp="1657544544482">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1657285731039" />
+    <state x="312" y="165" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1657544544482" />
     <state x="333" y="158" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1656846605179" />
-    <state width="728" height="438" key="XDebugger.FullValuePopup" timestamp="1657427595046">
+    <state width="728" height="438" key="XDebugger.FullValuePopup" timestamp="1657860728430">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="728" height="438" key="XDebugger.FullValuePopup/0.0.1440.860@0.0.1440.860" timestamp="1657427595046" />
+    <state width="728" height="438" key="XDebugger.FullValuePopup/0.0.1440.860@0.0.1440.860" timestamp="1657860728430" />
     <state x="488" y="340" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1657269447835">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -964,10 +969,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="470" y="106" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1440.860@0.0.1440.860" timestamp="1657256359578" />
-    <state x="269" y="168" width="892" height="568" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1657284806050">
+    <state x="269" y="168" width="892" height="568" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1657783041538">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="269" y="168" width="892" height="568" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.860@0.0.1440.860" timestamp="1657284806050" />
+    <state x="269" y="168" width="892" height="568" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.860@0.0.1440.860" timestamp="1657783041538" />
     <state x="900" y="327" key="extract.method.dialog" timestamp="1656491224946">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -980,23 +985,45 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="399" y="231" key="git4idea.merge.GitPullDialog/0.0.1440.860@0.0.1440.860" timestamp="1655793228563" />
-    <state x="94" y="141" key="new project wizard" timestamp="1657541723103">
+    <state x="94" y="141" key="new project wizard" timestamp="1657619462694">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="94" y="141" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1657541723103" />
+    <state x="94" y="141" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1657619462694" />
     <state x="189" y="89" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1656142667613" />
-    <state x="743" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1657539478528">
+    <state x="520" y="510" width="672" height="678" key="search.everywhere.popup" timestamp="1657858897280">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="743" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1657539478528" />
+    <state x="520" y="510" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1657858897280" />
     <state x="730" y="326" width="717" height="650" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1656817633815" />
-    <state x="579" y="333" width="373" height="491" key="search.text.field" timestamp="1657527731399">
+    <state x="579" y="333" width="373" height="491" key="search.text.field" timestamp="1657848060401">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="579" y="333" width="373" height="491" key="search.text.field/0.0.1440.860@0.0.1440.860" timestamp="1657527731399" />
+    <state x="579" y="333" width="373" height="491" key="search.text.field/0.0.1440.860@0.0.1440.860" timestamp="1657848060401" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.java</url>
+          <line>412</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.java</url>
+          <line>443</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service/service-order/src/main/java/com/atguigu/gmall/order/service/impl/OrderBizServiceImpl.java</url>
+          <line>450</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ware-manage/src/main/java/com/atguigu/gmall/ware/service/impl/GwareServiceImpl.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint suspend="NONE" type="java-exception" />
       </default-breakpoints>

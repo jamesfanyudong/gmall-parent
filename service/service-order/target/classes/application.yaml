@@ -5,8 +5,8 @@ spring:
     include: sharding
   main:
     allow-bean-definition-overriding: true
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   rabbitmq:
     host: 192.168.200.128
     port: 5672

@@ -16,4 +16,14 @@ public class MQConst {
     public static final String ROUTE_KEY_ORDER_TIMEOUT = "order.timeout" ;
     public static final String ROUTE_KEY_ORDER_CREATE = "oreder.create";
     public static final String QUEUE_ORDER_DEAD = "queue-order-dead";
+
+    public static final String QUEUE_ORDER_PAYED = "queue-order-payed";
+    public static final String QUEUE_WARE_ORDER = "queue.ware.order";
+
+
+    public static final String EXCHANGE_WARE_SYS = "exchange.direct.ware.stock";
+
+    public static final String ROUTE_KEY_WARE_STOCK = "ware.stock";
+
+    public static final String ROUTE_KEY_ORDER_PAYED = "route-key-order-payed";
 }

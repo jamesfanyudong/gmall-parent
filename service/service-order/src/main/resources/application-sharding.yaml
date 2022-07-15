@@ -164,9 +164,10 @@ spring:
         key-generators:
           snow-alg:
             type: SNOWFLAKE
-    #        binding-tables:
-    #          - order_info,order_detail
-    #          - order_info,order_status_log
+        binding-tables:
+          - order_info,order_detail
+
+
     props:
       sql-show: true
 

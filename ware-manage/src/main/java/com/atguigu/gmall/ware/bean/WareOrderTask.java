@@ -1,15 +1,14 @@
 package com.atguigu.gmall.ware.bean;
 
-import com.atguigu.gmall.ware.enums.TaskStatus;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import org.apache.ibatis.type.JdbcType;
 
 import java.util.Date;
 import java.util.List;
 
 /**
+ * @author fanyudong
  * @param
  * @return
  */
@@ -20,6 +19,9 @@ public class WareOrderTask {
 
     @TableField
     private String orderId;
+
+    @TableField
+    private Long userId;
 
     @TableField
     private String consignee;
@@ -56,6 +58,15 @@ public class WareOrderTask {
 
     @TableField(exist = false)
     private List<WareOrderTaskDetail> details;
+
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
 
     public String getId() {
         return id;

@@ -19,6 +19,7 @@ public class MQTest {
     @Test
     void testSend(){
         rabbitTemplate.convertAndSend("testExchange","route-test-key","hello,rabbit");
+        
 
 
 

@@ -3,4 +3,3 @@ spring:
     name: service-ware
   profiles:
     active: dev
-

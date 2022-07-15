@@ -31,6 +31,11 @@ spring:
           predicates:
             - Path=/api/order/**
 
+        - id: pay_route
+          uri: lb://service-pay
+          predicates:
+            - Path=/api/payment/**,/rpcapi/payment/**
+
 
         - id: cart_route
           uri: lb://service-cart
@@ -53,5 +58,8 @@ app:
       - /order/**
       - /incr
       - /cart.html
+      - /**/auth/**
+      - /api/payment/**
+      - /trade.html
     no-auth-url:
       - /rpc/inner/**   #内部的rpc请求浏览器不能直接访问
